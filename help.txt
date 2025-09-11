@@ -1,0 +1,45 @@
+backend/
+├── controllers/
+│   ├── authController.js
+│   ├── doctorController.js
+│   └── leaveController.js
+├── middleware/
+│   ├── auth.js
+│   └── errorLogger.js
+├── routes/
+│   ├── auth.js
+│   ├── doctor.js
+│   └── leave.js
+├── uploads/          # for storing profile photos
+├── models/
+│   ├── user.js
+│   └── leave.js
+├── utils/
+│   └── logger.js
+├── app.js
+└── config.js
+
+
+
+
+-----------------------------------------------------------------------
+
+
+frontend/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── Login.jsx
+│   │   ├── Register.jsx
+│   │   ├── Profile.jsx
+│   │   ├── Dashboard.jsx
+│   │   ├── ApplyLeave.jsx
+│   │   ├── LeaveHistory.jsx
+│   │   └── AdminApprove.jsx
+│   ├── contexts/
+│   │   └── AuthContext.jsx
+│   ├── services/
+│   │   └── api.js
+│   ├── App.jsx
+│   └── index.js
+└── package.json
