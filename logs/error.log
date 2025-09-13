@@ -32,3 +32,35 @@ Error: listen EADDRINUSE: address already in use :::5000
     at startServer (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\app.js:95:13)
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
 2025-09-11 09:09:51 [ERROR]: ❌ Failed to connect to database. Exiting...
+2025-09-12 12:26:13 [ERROR]: Authentication error: jwt expired
+TokenExpiredError: jwt expired
+    at C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\jsonwebtoken\verify.js:101:10)
+    at authenticate (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\middleware\auth.js:18:29)
+    at Layer.handle [as handle_request] (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\express\lib\router\index.js:346:12)
+2025-09-12 12:26:13 [ERROR]: Authentication error: jwt expired
+TokenExpiredError: jwt expired
+    at C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\jsonwebtoken\verify.js:101:10)
+    at authenticate (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\middleware\auth.js:18:29)
+    at Layer.handle [as handle_request] (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\express\lib\router\index.js:346:12)
+2025-09-12 23:02:33 [ERROR]: Uncaught Exception: listen EADDRINUSE: address already in use :::5000
+Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (node:net:1937:16)
+    at listenInCluster (node:net:1994:12)
+    at Server.listen (node:net:2099:7)
+    at Function.listen (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\express\lib\application.js:635:24)
+    at startServer (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\app.js:95:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)

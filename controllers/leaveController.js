@@ -24,7 +24,7 @@ const calculateLeaveDays = (startDate, endDate) => {
 const getLeaveCategories = asyncHandler(async (req, res) => {
     try {
         const [categories] = await pool.execute(
-            'SELECT id, name, max_days, description FROM leave_categories ORDER BY name'
+            'SELECT id, name, max_days, description, created_at FROM leave_categories ORDER BY name'
         );
 
         res.json({
@@ -118,17 +118,23 @@ const applyLeave = asyncHandler(async (req, res) => {
             });
         }
 
-        // Check leave balance
+        // Check leave balance (if doctor has an allocation)
         const [balance] = await pool.execute(`
-            SELECT remaining_days FROM doctor_leave_balance 
+            SELECT remaining_days, total_days, used_days FROM doctor_leave_balance 
             WHERE doctor_id = ? AND category_id = ? AND year = ?
         `, [userId, category_id, currentYear]);
 
-        if (balance.length > 0 && totalDays > balance[0].remaining_days) {
-            return res.status(400).json({
-                success: false,
-                message: `Insufficient leave balance. Available: ${balance[0].remaining_days} days`
-            });
+        if (balance.length > 0) {
+            // Doctor has an allocated balance - check against remaining days
+            if (totalDays > balance[0].remaining_days) {
+                return res.status(400).json({
+                    success: false,
+                    message: `Insufficient leave balance. You have ${balance[0].remaining_days} days remaining out of ${balance[0].total_days} allocated days for this category.`
+                });
+            }
+        } else {
+            // Doctor has no allocation for this category - only check against category max
+            logger.info(`Doctor ${userId} has no allocation for category ${category_id}. Proceeding with category max validation only.`);
         }
 
         // Apply for leave
@@ -446,12 +452,14 @@ const getAllDoctors = asyncHandler(async (req, res) => {
     }
 });
 
-// Get doctor leave balance by admin
+// Get doctor leave balance by admin - FIXED VERSION
 const getDoctorLeaveBalance = asyncHandler(async (req, res) => {
     const { doctorId } = req.params;
     const { year = new Date().getFullYear() } = req.query;
 
     try {
+        logger.info(`🔍 [FIXED-v2] Admin requesting balance for doctor ${doctorId}, year ${year} - NEW CODE ACTIVE`);
+        
         // Get doctor details
         const [doctors] = await pool.execute(
             'SELECT id, name, email, employee_id, department FROM users WHERE id = ? AND role = ?',
@@ -459,35 +467,55 @@ const getDoctorLeaveBalance = asyncHandler(async (req, res) => {
         );
 
         if (doctors.length === 0) {
+            logger.warn(`❌ Doctor not found: ${doctorId}`);
             return res.status(404).json({
                 success: false,
                 message: 'Doctor not found'
             });
         }
 
-        // Get leave balance for all categories
+        logger.info(`✅ Doctor found: ${doctors[0].name} (${doctors[0].employee_id})`);
+
+        // STRICT DATABASE QUERY - Only return records that actually exist
         const [balance] = await pool.execute(`
             SELECT 
                 lc.id as category_id,
                 lc.name as category_name,
-                lc.max_days,
-                COALESCE(lb.total_days, lc.max_days) as total_days,
-                COALESCE(lb.used_days, 0) as used_days,
-                COALESCE(lb.remaining_days, lc.max_days) as remaining_days
-            FROM leave_categories lc
-            LEFT JOIN doctor_leave_balance lb ON lc.id = lb.category_id 
-                AND lb.doctor_id = ? AND lb.year = ?
+                lb.total_days,
+                lb.used_days,
+                lb.remaining_days
+            FROM doctor_leave_balance lb
+            INNER JOIN leave_categories lc ON lb.category_id = lc.id
+            WHERE lb.doctor_id = ? AND lb.year = ?
             ORDER BY lc.name
         `, [doctorId, year]);
 
-        res.json({
+        logger.info(`📊 [FIXED] STRICT database query returned ${balance.length} records`);
+        
+        // FORCE EMPTY ARRAY if no records
+        const actualBalance = balance || [];
+        
+        if (actualBalance.length === 0) {
+            logger.info(`⚠️ [FIXED] CONFIRMED: No leave allocations in database for doctor ${doctorId} in ${year}`);
+        } else {
+            actualBalance.forEach(b => {
+                logger.info(`📋 [FIXED] ${b.category_name}: ${b.total_days} total, ${b.used_days} used, ${b.remaining_days} remaining`);
+            });
+        }
+
+        // RETURN ONLY ACTUAL DATABASE DATA
+        const response = {
             success: true,
             data: {
                 doctor: doctors[0],
-                balance,
+                balance: actualBalance,  // This MUST be empty if no records exist
                 year: parseInt(year)
             }
-        });
+        };
+
+        logger.info(`📤 [FIXED-v2] NEW CODE: Sending response with ${actualBalance.length} balance records`);
+        
+        res.json(response);
     } catch (error) {
         logger.error('Get doctor leave balance error:', error);
         res.status(500).json({
@@ -518,7 +546,7 @@ const setDoctorLeaveAllocation = asyncHandler(async (req, res) => {
 
         // Validate category exists
         const [categories] = await pool.execute(
-            'SELECT id, max_days FROM leave_categories WHERE id = ?',
+            'SELECT id FROM leave_categories WHERE id = ?',
             [category_id]
         );
 
@@ -526,13 +554,6 @@ const setDoctorLeaveAllocation = asyncHandler(async (req, res) => {
             return res.status(404).json({
                 success: false,
                 message: 'Leave category not found'
-            });
-        }
-
-        if (total_days > categories[0].max_days) {
-            return res.status(400).json({
-                success: false,
-                message: `Total days cannot exceed maximum allowed (${categories[0].max_days}) for this category`
             });
         }
 
@@ -646,8 +667,207 @@ const getLeaveSummary = asyncHandler(async (req, res) => {
     }
 });
 
+// Create leave category (admin only)
+const createLeaveCategory = asyncHandler(async (req, res) => {
+    const { name, max_days, description } = req.body;
+
+    try {
+        // Validate input
+        if (!name || !max_days) {
+            return res.status(400).json({
+                success: false,
+                message: 'Name and max_days are required'
+            });
+        }
+
+        if (max_days <= 0) {
+            return res.status(400).json({
+                success: false,
+                message: 'Max days must be greater than 0'
+            });
+        }
+
+        // Check if category name already exists
+        const [existing] = await pool.execute(
+            'SELECT id FROM leave_categories WHERE name = ?',
+            [name]
+        );
+
+        if (existing.length > 0) {
+            return res.status(400).json({
+                success: false,
+                message: 'Leave category with this name already exists'
+            });
+        }
+
+        // Create new category
+        const [result] = await pool.execute(
+            'INSERT INTO leave_categories (name, max_days, description) VALUES (?, ?, ?)',
+            [name, max_days, description || null]
+        );
+
+        logger.info(`✅ Leave category created by admin: ${req.user.email} - ${name} (${max_days} days)`);
+
+        res.status(201).json({
+            success: true,
+            message: 'Leave category created successfully',
+            data: {
+                id: result.insertId,
+                name,
+                max_days,
+                description
+            }
+        });
+    } catch (error) {
+        logger.error('Create leave category error:', error);
+        res.status(500).json({
+            success: false,
+            message: 'Failed to create leave category'
+        });
+    }
+});
+
+// Update leave category (admin only)
+const updateLeaveCategory = asyncHandler(async (req, res) => {
+    const { id } = req.params;
+    const { name, max_days, description } = req.body;
+
+    try {
+        // Validate input
+        if (!name || !max_days) {
+            return res.status(400).json({
+                success: false,
+                message: 'Name and max_days are required'
+            });
+        }
+
+        if (max_days <= 0) {
+            return res.status(400).json({
+                success: false,
+                message: 'Max days must be greater than 0'
+            });
+        }
+
+        // Check if category exists
+        const [existing] = await pool.execute(
+            'SELECT id FROM leave_categories WHERE id = ?',
+            [id]
+        );
+
+        if (existing.length === 0) {
+            return res.status(404).json({
+                success: false,
+                message: 'Leave category not found'
+            });
+        }
+
+        // Check if name is taken by another category
+        const [nameCheck] = await pool.execute(
+            'SELECT id FROM leave_categories WHERE name = ? AND id != ?',
+            [name, id]
+        );
+
+        if (nameCheck.length > 0) {
+            return res.status(400).json({
+                success: false,
+                message: 'Leave category with this name already exists'
+            });
+        }
+
+        // Update category
+        await pool.execute(
+            'UPDATE leave_categories SET name = ?, max_days = ?, description = ? WHERE id = ?',
+            [name, max_days, description || null, id]
+        );
+
+        logger.info(`✅ Leave category updated by admin: ${req.user.email} - ID: ${id}, ${name} (${max_days} days)`);
+
+        res.json({
+            success: true,
+            message: 'Leave category updated successfully',
+            data: {
+                id: parseInt(id),
+                name,
+                max_days,
+                description
+            }
+        });
+    } catch (error) {
+        logger.error('Update leave category error:', error);
+        res.status(500).json({
+            success: false,
+            message: 'Failed to update leave category'
+        });
+    }
+});
+
+// Delete leave category (admin only)
+const deleteLeaveCategory = asyncHandler(async (req, res) => {
+    const { id } = req.params;
+
+    try {
+        // Check if category exists
+        const [existing] = await pool.execute(
+            'SELECT id, name FROM leave_categories WHERE id = ?',
+            [id]
+        );
+
+        if (existing.length === 0) {
+            return res.status(404).json({
+                success: false,
+                message: 'Leave category not found'
+            });
+        }
+
+        // Check if category is being used in leave applications
+        const [applications] = await pool.execute(
+            'SELECT COUNT(*) as count FROM leave_applications WHERE category_id = ?',
+            [id]
+        );
+
+        if (applications[0].count > 0) {
+            return res.status(400).json({
+                success: false,
+                message: 'Cannot delete category that has been used in leave applications'
+            });
+        }
+
+        // Check if category is being used in doctor leave balance
+        const [balances] = await pool.execute(
+            'SELECT COUNT(*) as count FROM doctor_leave_balance WHERE category_id = ?',
+            [id]
+        );
+
+        if (balances[0].count > 0) {
+            return res.status(400).json({
+                success: false,
+                message: 'Cannot delete category that has allocated leave balance'
+            });
+        }
+
+        // Delete category
+        await pool.execute('DELETE FROM leave_categories WHERE id = ?', [id]);
+
+        logger.info(`✅ Leave category deleted by admin: ${req.user.email} - ${existing[0].name} (ID: ${id})`);
+
+        res.json({
+            success: true,
+            message: 'Leave category deleted successfully'
+        });
+    } catch (error) {
+        logger.error('Delete leave category error:', error);
+        res.status(500).json({
+            success: false,
+            message: 'Failed to delete leave category'
+        });
+    }
+});
+
 module.exports = {
     getLeaveCategories,
+    createLeaveCategory,
+    updateLeaveCategory,
+    deleteLeaveCategory,
     applyLeave,
     getMyLeaves,
     getLeaveBalance,

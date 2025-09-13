@@ -2,6 +2,9 @@ const express = require('express');
 const router = express.Router();
 const {
     getLeaveCategories,
+    createLeaveCategory,
+    updateLeaveCategory,
+    deleteLeaveCategory,
     applyLeave,
     getMyLeaves,
     getLeaveBalance,
@@ -30,5 +33,10 @@ router.get('/doctors', authenticate, adminOnly, getAllDoctors);
 router.get('/doctors/:doctorId/balance', authenticate, adminOnly, getDoctorLeaveBalance);
 router.put('/doctors/:doctorId/allocation', authenticate, adminOnly, setDoctorLeaveAllocation);
 router.get('/summary', authenticate, adminOnly, getLeaveSummary);
+
+// Leave category management (admin only)
+router.post('/categories', authenticate, adminOnly, createLeaveCategory);
+router.put('/categories/:id', authenticate, adminOnly, updateLeaveCategory);
+router.delete('/categories/:id', authenticate, adminOnly, deleteLeaveCategory);
 
 module.exports = router;
