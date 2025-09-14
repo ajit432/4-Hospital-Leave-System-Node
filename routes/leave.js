@@ -5,6 +5,8 @@ const {
     createLeaveCategory,
     updateLeaveCategory,
     deleteLeaveCategory,
+    activateLeaveCategory,
+    deactivateLeaveCategory,
     applyLeave,
     getMyLeaves,
     getLeaveBalance,
@@ -38,5 +40,7 @@ router.get('/summary', authenticate, adminOnly, getLeaveSummary);
 router.post('/categories', authenticate, adminOnly, createLeaveCategory);
 router.put('/categories/:id', authenticate, adminOnly, updateLeaveCategory);
 router.delete('/categories/:id', authenticate, adminOnly, deleteLeaveCategory);
+router.put('/categories/:id/activate', authenticate, adminOnly, activateLeaveCategory);
+router.put('/categories/:id/deactivate', authenticate, adminOnly, deactivateLeaveCategory);
 
 module.exports = router;

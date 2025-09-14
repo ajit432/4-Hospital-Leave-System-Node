@@ -286,6 +286,13 @@ const getDashboard = asyncHandler(async (req, res) => {
 // Get all doctors (admin only)
 const getAllDoctors = asyncHandler(async (req, res) => {
     try {
+        const { status = 'active' } = req.query; // active, inactive (default to active)
+        
+        let whereClause = "WHERE role = 'doctor' AND is_active = 1"; // Default to active only
+        if (status === 'inactive') {
+            whereClause = "WHERE role = 'doctor' AND is_active = 0";
+        }
+
         const [doctors] = await pool.execute(`
             SELECT 
                 id, 
@@ -295,10 +302,11 @@ const getAllDoctors = asyncHandler(async (req, res) => {
                 phone, 
                 employee_id, 
                 profile_picture,
+                is_active,
                 created_at
             FROM users 
-            WHERE role = 'doctor'
-            ORDER BY name ASC
+            ${whereClause}
+            ORDER BY is_active DESC, name ASC
         `);
 
         res.json({
@@ -316,11 +324,125 @@ const getAllDoctors = asyncHandler(async (req, res) => {
     }
 });
 
+// Deactivate doctor (admin only)
+const deactivateDoctor = asyncHandler(async (req, res) => {
+    try {
+        const { doctorId } = req.params;
+
+        // Check if doctor exists
+        const [doctors] = await pool.execute(
+            'SELECT id, name, email, is_active FROM users WHERE id = ? AND role = ?',
+            [doctorId, 'doctor']
+        );
+
+        if (doctors.length === 0) {
+            return res.status(404).json({
+                success: false,
+                message: 'Doctor not found'
+            });
+        }
+
+        const doctor = doctors[0];
+
+        if (doctor.is_active === 0) {
+            return res.status(400).json({
+                success: false,
+                message: 'Doctor is already inactive'
+            });
+        }
+
+        // Deactivate doctor
+        await pool.execute(
+            'UPDATE users SET is_active = 0 WHERE id = ?',
+            [doctorId]
+        );
+
+        logger.info(`✅ Doctor deactivated: ${doctor.email} (ID: ${doctorId})`);
+
+        res.json({
+            success: true,
+            message: 'Doctor deactivated successfully',
+            data: {
+                doctor: {
+                    id: doctor.id,
+                    name: doctor.name,
+                    email: doctor.email,
+                    is_active: 0
+                }
+            }
+        });
+    } catch (error) {
+        logger.error('Deactivate doctor error:', error);
+        res.status(500).json({
+            success: false,
+            message: 'Failed to deactivate doctor'
+        });
+    }
+});
+
+// Reactivate doctor (admin only)
+const reactivateDoctor = asyncHandler(async (req, res) => {
+    try {
+        const { doctorId } = req.params;
+
+        // Check if doctor exists
+        const [doctors] = await pool.execute(
+            'SELECT id, name, email, is_active FROM users WHERE id = ? AND role = ?',
+            [doctorId, 'doctor']
+        );
+
+        if (doctors.length === 0) {
+            return res.status(404).json({
+                success: false,
+                message: 'Doctor not found'
+            });
+        }
+
+        const doctor = doctors[0];
+
+        if (doctor.is_active === 1) {
+            return res.status(400).json({
+                success: false,
+                message: 'Doctor is already active'
+            });
+        }
+
+        // Reactivate doctor
+        await pool.execute(
+            'UPDATE users SET is_active = 1 WHERE id = ?',
+            [doctorId]
+        );
+
+        logger.info(`✅ Doctor reactivated: ${doctor.email} (ID: ${doctorId})`);
+
+        res.json({
+            success: true,
+            message: 'Doctor reactivated successfully',
+            data: {
+                doctor: {
+                    id: doctor.id,
+                    name: doctor.name,
+                    email: doctor.email,
+                    is_active: 1
+                }
+            }
+        });
+    } catch (error) {
+        logger.error('Reactivate doctor error:', error);
+        res.status(500).json({
+            success: false,
+            message: 'Failed to reactivate doctor'
+        });
+    }
+});
+
 module.exports = {
     updateProfile,
     changePassword,
     uploadProfilePicture,
     removeProfilePicture,
     getDashboard,
-    getAllDoctors
+    getAllDoctors,
+    deactivateDoctor,
+    reactivateDoctor
 };

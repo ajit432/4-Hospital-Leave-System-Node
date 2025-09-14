@@ -64,3 +64,39 @@ Error: listen EADDRINUSE: address already in use :::5000
     at Function.listen (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\express\lib\application.js:635:24)
     at startServer (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\app.js:95:13)
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-09-14 21:58:24 [ERROR]: ❌ Error in POST /api/auth/login: Unknown column 'profile_picture' in 'field list'
+Error: Unknown column 'profile_picture' in 'field list'
+    at PromisePool.execute (C:\Users\ajitk\OneDrive\Desktop\Keyss\React HLS\Hospital-Leave-System-Node\node_modules\mysql2\lib\promise\pool.js:54:22)
+    at C:\Users\ajitk\OneDrive\Desktop\Keyss\React HLS\Hospital-Leave-System-Node\controllers\authController.js:78:32
+    at C:\Users\ajitk\OneDrive\Desktop\Keyss\React HLS\Hospital-Leave-System-Node\middleware\errorLogger.js:51:25
+    at Layer.handle [as handle_request] (C:\Users\ajitk\OneDrive\Desktop\Keyss\React HLS\Hospital-Leave-System-Node\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\ajitk\OneDrive\Desktop\Keyss\React HLS\Hospital-Leave-System-Node\node_modules\express\lib\router\route.js:149:13)
+    at handleValidationErrors (C:\Users\ajitk\OneDrive\Desktop\Keyss\React HLS\Hospital-Leave-System-Node\middleware\validation.js:13:5)
+    at Layer.handle [as handle_request] (C:\Users\ajitk\OneDrive\Desktop\Keyss\React HLS\Hospital-Leave-System-Node\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\ajitk\OneDrive\Desktop\Keyss\React HLS\Hospital-Leave-System-Node\node_modules\express\lib\router\route.js:149:13)
+    at middleware (C:\Users\ajitk\OneDrive\Desktop\Keyss\React HLS\Hospital-Leave-System-Node\node_modules\express-validator\lib\middlewares\check.js:16:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-09-14 21:58:28 [ERROR]: ❌ Error in POST /api/auth/login: Unknown column 'profile_picture' in 'field list'
+Error: Unknown column 'profile_picture' in 'field list'
+    at PromisePool.execute (C:\Users\ajitk\OneDrive\Desktop\Keyss\React HLS\Hospital-Leave-System-Node\node_modules\mysql2\lib\promise\pool.js:54:22)
+    at C:\Users\ajitk\OneDrive\Desktop\Keyss\React HLS\Hospital-Leave-System-Node\controllers\authController.js:78:32
+    at C:\Users\ajitk\OneDrive\Desktop\Keyss\React HLS\Hospital-Leave-System-Node\middleware\errorLogger.js:51:25
+    at Layer.handle [as handle_request] (C:\Users\ajitk\OneDrive\Desktop\Keyss\React HLS\Hospital-Leave-System-Node\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\ajitk\OneDrive\Desktop\Keyss\React HLS\Hospital-Leave-System-Node\node_modules\express\lib\router\route.js:149:13)
+    at handleValidationErrors (C:\Users\ajitk\OneDrive\Desktop\Keyss\React HLS\Hospital-Leave-System-Node\middleware\validation.js:13:5)
+    at Layer.handle [as handle_request] (C:\Users\ajitk\OneDrive\Desktop\Keyss\React HLS\Hospital-Leave-System-Node\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\ajitk\OneDrive\Desktop\Keyss\React HLS\Hospital-Leave-System-Node\node_modules\express\lib\router\route.js:149:13)
+    at middleware (C:\Users\ajitk\OneDrive\Desktop\Keyss\React HLS\Hospital-Leave-System-Node\node_modules\express-validator\lib\middlewares\check.js:16:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-09-14 22:22:49 [ERROR]: Uncaught Exception: listen EADDRINUSE: address already in use :::5000
+Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (node:net:1937:16)
+    at listenInCluster (node:net:1994:12)
+    at Server.listen (node:net:2099:7)
+    at Function.listen (C:\Users\ajitk\OneDrive\Desktop\Keyss\React HLS\Hospital-Leave-System-Node\node_modules\express\lib\application.js:635:24)
+    at startServer (C:\Users\ajitk\OneDrive\Desktop\Keyss\React HLS\Hospital-Leave-System-Node\app.js:95:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-09-14 22:25:03 [ERROR]: Doctor registration error: Bind parameters must not contain undefined. To pass SQL NULL specify JS null
+Error: Bind parameters must not contain undefined. To pass SQL NULL specify JS null
+    at PromisePool.execute (C:\Users\ajitk\OneDrive\Desktop\Keyss\React HLS\Hospital-Leave-System-Node\node_modules\mysql2\lib\promise\pool.js:54:22)
+    at C:\Users\ajitk\OneDrive\Desktop\Keyss\React HLS\Hospital-Leave-System-Node\controllers\authController.js:96:37

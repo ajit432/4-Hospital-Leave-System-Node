@@ -6,7 +6,9 @@ const {
     uploadProfilePicture,
     removeProfilePicture,
     getDashboard,
-    getAllDoctors
+    getAllDoctors,
+    deactivateDoctor,
+    reactivateDoctor
 } = require('../controllers/doctorController');
 const { authenticate, doctorOrAdmin, adminOnly } = require('../middleware/auth');
 const { uploadProfilePicture: uploadMiddleware, handleUploadError } = require('../middleware/upload');
@@ -21,5 +23,7 @@ router.delete('/remove-profile-picture', authenticate, doctorOrAdmin, removeProf
 
 // Admin only routes
 router.get('/all', authenticate, adminOnly, getAllDoctors);
+router.put('/:doctorId/deactivate', authenticate, adminOnly, deactivateDoctor);
+router.put('/:doctorId/reactivate', authenticate, adminOnly, reactivateDoctor);
 
 module.exports = router;

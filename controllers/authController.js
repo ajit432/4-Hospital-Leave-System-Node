@@ -14,9 +14,9 @@ const generateToken = (userId, email, role) => {
     );
 };
 
-// Register new user
+// Register new user (Admin only - for creating admin accounts)
 const register = asyncHandler(async (req, res) => {
-    const { name, email, password, department, phone, employee_id, role = 'doctor' } = req.body;
+    const { name, email, password, department, phone, employee_id, role = 'admin' } = req.body;
 
     // Check if user already exists
     const [existingUsers] = await pool.execute(
@@ -70,13 +70,69 @@ const register = asyncHandler(async (req, res) => {
     }
 });
 
+// Register new doctor (Admin only)
+const registerDoctor = asyncHandler(async (req, res) => {
+    const { name, email, password, department, phone, employee_id } = req.body;
+    
+    // Ensure optional fields are null instead of undefined
+    const doctorDepartment = department || null;
+    const doctorPhone = phone || null;
+
+    // Check if user already exists
+    const [existingUsers] = await pool.execute(
+        'SELECT id FROM users WHERE email = ? OR employee_id = ?',
+        [email, employee_id]
+    );
+
+    if (existingUsers.length > 0) {
+        return res.status(400).json({
+            success: false,
+            message: 'Doctor with this email or employee ID already exists'
+        });
+    }
+
+    // Hash password
+    const saltRounds = 12;
+    const hashedPassword = await bcrypt.hash(password, saltRounds);
+
+    try {
+        // Insert new doctor
+        const [result] = await pool.execute(
+            'INSERT INTO users (name, email, password, role, department, phone, employee_id) VALUES (?, ?, ?, ?, ?, ?, ?)',
+            [name, email, hashedPassword, 'doctor', doctorDepartment, doctorPhone, employee_id]
+        );
+
+        // Get doctor data without password
+        const [newDoctor] = await pool.execute(
+            'SELECT id, name, email, role, department, phone, employee_id, profile_picture, created_at FROM users WHERE id = ?',
+            [result.insertId]
+        );
+
+        logger.info(`✅ New doctor registered by admin: ${email}`);
+
+        res.status(201).json({
+            success: true,
+            message: 'Doctor registered successfully',
+            data: {
+                doctor: newDoctor[0]
+            }
+        });
+    } catch (error) {
+        logger.error('Doctor registration error:', error);
+        res.status(500).json({
+            success: false,
+            message: 'Doctor registration failed'
+        });
+    }
+});
+
 // Login user
 const login = asyncHandler(async (req, res) => {
     const { email, password } = req.body;
 
     // Get user from database
     const [users] = await pool.execute(
-        'SELECT id, name, email, password, role, department, phone, employee_id, profile_picture FROM users WHERE email = ?',
+        'SELECT id, name, email, password, role, department, phone, employee_id, profile_picture, is_active FROM users WHERE email = ?',
         [email]
     );
 
@@ -96,6 +152,14 @@ const login = asyncHandler(async (req, res) => {
         return res.status(401).json({
             success: false,
             message: 'Invalid email or password'
+        });
+    }
+
+    // Check if user is active
+    if (user.is_active === 0) {
+        return res.status(403).json({
+            success: false,
+            message: 'Your account has been deactivated. Please contact administrator.'
         });
     }
 
@@ -167,6 +231,7 @@ const refreshToken = asyncHandler(async (req, res) => {
 
 module.exports = {
     register,
+    registerDoctor,
     login,
     getProfile,
     logout,

@@ -23,8 +23,15 @@ const calculateLeaveDays = (startDate, endDate) => {
 // Get leave categories
 const getLeaveCategories = asyncHandler(async (req, res) => {
     try {
+        const { status = 'active' } = req.query; // active, inactive (default to active)
+        
+        let whereClause = 'WHERE is_active = 1'; // Default to active only
+        if (status === 'inactive') {
+            whereClause = 'WHERE is_active = 0';
+        }
+
         const [categories] = await pool.execute(
-            'SELECT id, name, max_days, description, created_at FROM leave_categories ORDER BY name'
+            `SELECT id, name, max_days, description, is_active, created_at FROM leave_categories ${whereClause} ORDER BY is_active DESC, name ASC`
         );
 
         res.json({
@@ -702,7 +709,7 @@ const createLeaveCategory = asyncHandler(async (req, res) => {
 
         // Create new category
         const [result] = await pool.execute(
-            'INSERT INTO leave_categories (name, max_days, description) VALUES (?, ?, ?)',
+            'INSERT INTO leave_categories (name, max_days, description, is_active) VALUES (?, ?, ?, 1)',
             [name, max_days, description || null]
         );
 
@@ -863,11 +870,123 @@ const deleteLeaveCategory = asyncHandler(async (req, res) => {
     }
 });
 
+// Deactivate leave category (admin only)
+const deactivateLeaveCategory = asyncHandler(async (req, res) => {
+    try {
+        const { id } = req.params;
+
+        // Check if category exists
+        const [categories] = await pool.execute(
+            'SELECT id, name, is_active FROM leave_categories WHERE id = ?',
+            [id]
+        );
+
+        if (categories.length === 0) {
+            return res.status(404).json({
+                success: false,
+                message: 'Leave category not found'
+            });
+        }
+
+        const category = categories[0];
+
+        if (category.is_active === 0) {
+            return res.status(400).json({
+                success: false,
+                message: 'Leave category is already inactive'
+            });
+        }
+
+        // Deactivate category
+        await pool.execute(
+            'UPDATE leave_categories SET is_active = 0 WHERE id = ?',
+            [id]
+        );
+
+        logger.info(`✅ Leave category deactivated: ${category.name} (ID: ${id}) by admin: ${req.user.email}`);
+
+        res.json({
+            success: true,
+            message: 'Leave category deactivated successfully',
+            data: {
+                category: {
+                    id: category.id,
+                    name: category.name,
+                    is_active: 0
+                }
+            }
+        });
+    } catch (error) {
+        logger.error('Deactivate leave category error:', error);
+        res.status(500).json({
+            success: false,
+            message: 'Failed to deactivate leave category'
+        });
+    }
+});
+
+// Activate leave category (admin only)
+const activateLeaveCategory = asyncHandler(async (req, res) => {
+    try {
+        const { id } = req.params;
+
+        // Check if category exists
+        const [categories] = await pool.execute(
+            'SELECT id, name, is_active FROM leave_categories WHERE id = ?',
+            [id]
+        );
+
+        if (categories.length === 0) {
+            return res.status(404).json({
+                success: false,
+                message: 'Leave category not found'
+            });
+        }
+
+        const category = categories[0];
+
+        if (category.is_active === 1) {
+            return res.status(400).json({
+                success: false,
+                message: 'Leave category is already active'
+            });
+        }
+
+        // Activate category
+        await pool.execute(
+            'UPDATE leave_categories SET is_active = 1 WHERE id = ?',
+            [id]
+        );
+
+        logger.info(`✅ Leave category activated: ${category.name} (ID: ${id}) by admin: ${req.user.email}`);
+
+        res.json({
+            success: true,
+            message: 'Leave category activated successfully',
+            data: {
+                category: {
+                    id: category.id,
+                    name: category.name,
+                    is_active: 1
+                }
+            }
+        });
+    } catch (error) {
+        logger.error('Activate leave category error:', error);
+        res.status(500).json({
+            success: false,
+            message: 'Failed to activate leave category'
+        });
+    }
+});
+
 module.exports = {
     getLeaveCategories,
     createLeaveCategory,
     updateLeaveCategory,
     deleteLeaveCategory,
+    activateLeaveCategory,
+    deactivateLeaveCategory,
     applyLeave,
     getMyLeaves,
     getLeaveBalance,
