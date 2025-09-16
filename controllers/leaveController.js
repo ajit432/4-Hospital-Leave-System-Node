@@ -108,20 +108,25 @@ const applyLeave = asyncHandler(async (req, res) => {
 
         // Check for overlapping leaves
         const [overlapping] = await pool.execute(`
-            SELECT id FROM leave_applications 
-            WHERE doctor_id = ? 
-            AND status IN ('pending', 'approved')
+            SELECT id, start_date, end_date, lc.name as category_name, status
+            FROM leave_applications la
+            JOIN leave_categories lc ON la.category_id = lc.id
+            WHERE la.doctor_id = ? 
+            AND la.status IN ('pending', 'approved')
             AND (
-                (start_date <= ? AND end_date >= ?) OR
-                (start_date <= ? AND end_date >= ?) OR
-                (start_date >= ? AND end_date <= ?)
+                (la.start_date <= ? AND la.end_date >= ?) OR
+                (la.start_date <= ? AND la.end_date >= ?) OR
+                (la.start_date >= ? AND la.end_date <= ?)
             )
         `, [userId, start_date, start_date, end_date, end_date, start_date, end_date]);
 
         if (overlapping.length > 0) {
             return res.status(400).json({
                 success: false,
-                message: 'You have overlapping leave applications for the selected dates'
+                message: 'You have overlapping leave applications for the selected dates',
+                data: {
+                    overlappingLeaves: overlapping
+                }
             });
         }
 
@@ -142,6 +147,47 @@ const applyLeave = asyncHandler(async (req, res) => {
         } else {
             // Doctor has no allocation for this category - only check against category max
             logger.info(`Doctor ${userId} has no allocation for category ${category_id}. Proceeding with category max validation only.`);
+        }
+
+        // Check department coverage (optional warning, not blocking)
+        const [doctorInfo] = await pool.execute(
+            'SELECT department FROM users WHERE id = ?',
+            [userId]
+        );
+        
+        if (doctorInfo.length > 0 && doctorInfo[0].department) {
+            const department = doctorInfo[0].department;
+            
+            // Get total doctors in department
+            const [totalDoctors] = await pool.execute(
+                'SELECT COUNT(*) as count FROM users WHERE department = ? AND role = ? AND is_active = 1',
+                [department, 'doctor']
+            );
+
+            // Get doctors on leave during the specified period (excluding current doctor)
+            const [doctorsOnLeave] = await pool.execute(`
+                SELECT DISTINCT la.doctor_id
+                FROM leave_applications la
+                JOIN users u ON la.doctor_id = u.id
+                WHERE u.department = ? 
+                AND la.doctor_id != ?
+                AND la.status IN ('pending', 'approved')
+                AND (
+                    (la.start_date <= ? AND la.end_date >= ?) OR
+                    (la.start_date <= ? AND la.end_date >= ?) OR
+                    (la.start_date >= ? AND la.end_date <= ?)
+                )
+            `, [department, userId, start_date, start_date, end_date, end_date, start_date, end_date]);
+
+            const totalCount = totalDoctors[0].count;
+            const onLeaveCount = doctorsOnLeave.length;
+            const availableCount = totalCount - onLeaveCount;
+            const minimumRequired = Math.max(1, Math.ceil(totalCount * 0.3)); // At least 30% of department
+
+            if (availableCount < minimumRequired) {
+                logger.warn(`Department coverage warning for ${department}: ${availableCount} doctors available (minimum required: ${minimumRequired})`);
+                // Note: This is a warning, not an error - the application can still proceed
+            }
         }
 
         // Apply for leave
@@ -608,6 +654,66 @@ const setDoctorLeaveAllocation = asyncHandler(async (req, res) => {
     }
 });
 
+// Check department coverage for leave dates
+const checkDepartmentCoverage = asyncHandler(async (req, res) => {
+    const { start_date, end_date, department } = req.query;
+    
+    try {
+        if (!start_date || !end_date || !department) {
+            return res.status(400).json({
+                success: false,
+                message: 'Start date, end date, and department are required'
+            });
+        }
+
+        // Get total doctors in department
+        const [totalDoctors] = await pool.execute(
+            'SELECT COUNT(*) as count FROM users WHERE department = ? AND role = ? AND is_active = 1',
+            [department, 'doctor']
+        );
+
+        // Get doctors on leave during the specified period
+        const [doctorsOnLeave] = await pool.execute(`
+            SELECT DISTINCT la.doctor_id
+            FROM leave_applications la
+            JOIN users u ON la.doctor_id = u.id
+            WHERE u.department = ? 
+            AND la.status IN ('pending', 'approved')
+            AND (
+                (la.start_date <= ? AND la.end_date >= ?) OR
+                (la.start_date <= ? AND la.end_date >= ?) OR
+                (la.start_date >= ? AND la.end_date <= ?)
+            )
+        `, [department, start_date, start_date, end_date, end_date, start_date, end_date]);
+
+        const totalCount = totalDoctors[0].count;
+        const onLeaveCount = doctorsOnLeave.length;
+        const availableCount = totalCount - onLeaveCount;
+        
+        // Get minimum required doctors (this could be configurable)
+        const minimumRequired = Math.max(1, Math.ceil(totalCount * 0.3)); // At least 30% of department
+
+        res.json({
+            success: true,
+            data: {
+                department,
+                totalDoctors: totalCount,
+                availableDoctors: availableCount,
+                doctorsOnLeave: onLeaveCount,
+                minimumRequired,
+                isCoverageAdequate: availableCount >= minimumRequired,
+                coveragePercentage: totalCount > 0 ? Math.round((availableCount / totalCount) * 100) : 0
+            }
+        });
+    } catch (error) {
+        logger.error('Check department coverage error:', error);
+        res.status(500).json({
+            success: false,
+            message: 'Failed to check department coverage'
+        });
+    }
+});
+
 // Get leave summary for admin dashboard
 const getLeaveSummary = asyncHandler(async (req, res) => {
     const { year = new Date().getFullYear() } = req.query;
@@ -995,5 +1101,6 @@ module.exports = {
     getAllDoctors,
     getDoctorLeaveBalance,
     setDoctorLeaveAllocation,
+    checkDepartmentCoverage,
     getLeaveSummary
 };

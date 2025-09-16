@@ -15,6 +15,7 @@ const {
     getAllDoctors,
     getDoctorLeaveBalance,
     setDoctorLeaveAllocation,
+    checkDepartmentCoverage,
     getLeaveSummary
 } = require('../controllers/leaveController');
 const { authenticate, doctorOrAdmin, adminOnly } = require('../middleware/auth');
@@ -27,6 +28,7 @@ router.get('/categories', authenticate, getLeaveCategories);
 router.post('/apply', authenticate, doctorOrAdmin, validateLeaveApplication, applyLeave);
 router.get('/my-leaves', authenticate, doctorOrAdmin, getMyLeaves);
 router.get('/balance', authenticate, doctorOrAdmin, getLeaveBalance);
+router.get('/department-coverage', authenticate, doctorOrAdmin, checkDepartmentCoverage);
 
 // Admin only routes
 router.get('/all', authenticate, adminOnly, getAllLeaves);
