@@ -1721,3 +1721,95 @@ TokenExpiredError: jwt expired
 2025-09-22 09:32:36 [INFO]: 📤 [FIXED-v2] NEW CODE: Sending response with 5 balance records
 2025-09-22 09:32:36 [INFO]: 📤 GET /api/leave/doctors/15/balance?year=2025&_t=1758513756813 - Status: 200 - Duration: 12ms
 2025-09-22 09:32:36 [INFO]: 📋 Response: {"success":true,"data":{"doctor":{"id":15,"name":"Mithu","email":"mithu@gmail.com","employee_id":"mithu12","department":"ENT"},"balance":[{"category_id":1,"category_name":"Casual","total_days":29,"used_days":2,"remaining_days":27},{"category_id":2,"category_name":"Medical","total_days":30,"used_days":0,"remaining_days":30},{"category_id":4,"category_name":"One Shot","total_days":30,"used_days":0,"remaining_days":30},{"category_id":3,"category_name":"Paid","total_days":30,"used_days":0,"remaining_days":30},{"category_id":5,"category_name":"Test","total_days":20,"used_days":0,"remaining_days":20}],"year":2025}}
+2025-11-18 10:44:03 [INFO]: 🚀 Server started on port 5000
+2025-11-18 10:44:03 [INFO]: 🏥 Hospital Leave Management System API
+2025-11-18 10:44:03 [INFO]: 📍 Health check: http://localhost:5000/health
+2025-11-18 10:44:03 [INFO]: 📋 API documentation: http://localhost:5000/
+2025-11-18 10:44:03 [INFO]: 🌍 Environment: development
+2025-11-18 10:44:54 [INFO]: 📥 GET /api/auth/profile - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36 Edg/142.0.0.0
+2025-11-18 10:44:55 [ERROR]: Authentication error: jwt expired
+TokenExpiredError: jwt expired
+    at C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\jsonwebtoken\verify.js:101:10)
+    at authenticate (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\middleware\auth.js:18:29)
+    at Layer.handle [as handle_request] (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\express\lib\router\index.js:346:12)
+2025-11-18 10:44:55 [INFO]: 📤 GET /api/auth/profile - Status: 401 - Duration: 15ms
+2025-11-18 10:44:55 [INFO]: 📋 Response: {"success":false,"message":"Token expired."}
+2025-11-18 10:44:59 [INFO]: 📥 POST /api/auth/login - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36 Edg/142.0.0.0
+2025-11-18 10:44:59 [INFO]: 📄 Request Body: {"email":"admin@hospital.com","password":"[HIDDEN]"}
+2025-11-18 10:45:02 [ERROR]: ❌ Error in POST /api/auth/login: read ECONNRESET
+Error: read ECONNRESET
+    at PromisePool.execute (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\mysql2\lib\promise\pool.js:54:22)
+    at C:\Users\Ajit Kumar Behera\Desktop\Project React\node\controllers\authController.js:134:32
+    at C:\Users\Ajit Kumar Behera\Desktop\Project React\node\middleware\errorLogger.js:51:25
+    at Layer.handle [as handle_request] (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\express\lib\router\route.js:149:13)
+    at handleValidationErrors (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\middleware\validation.js:13:5)
+    at Layer.handle [as handle_request] (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\express\lib\router\route.js:149:13)
+    at middleware (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\express-validator\lib\middlewares\check.js:16:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-11-18 10:45:02 [INFO]: 📤 POST /api/auth/login - Status: 500 - Duration: 3036ms
+2025-11-18 10:45:02 [INFO]: 📋 Response: [Large response - 1404 characters]
+2025-11-18 10:49:13 [INFO]: 📥 POST /api/auth/login - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36 Edg/142.0.0.0
+2025-11-18 10:49:13 [INFO]: 📄 Request Body: {"email":"admin@hospital.com","password":"[HIDDEN]"}
+2025-11-18 10:49:13 [INFO]: ✅ User logged in: admin@hospital.com (admin)
+2025-11-18 10:49:13 [INFO]: 📤 POST /api/auth/login - Status: 200 - Duration: 329ms
+2025-11-18 10:49:13 [INFO]: 📋 Response: {"success":true,"message":"Login successful","data":{"user":{"id":13,"name":"Hospital Administrator","email":"admin@hospital.com","role":"admin","department":"Administration","phone":"+1234567890","employee_id":"ADMIN001","profile_picture":"/uploads/profiles/13_1757909107128.jpg","is_active":1},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEzLCJlbWFpbCI6ImFkbWluQGhvc3BpdGFsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc2MzQ0MzE1MywiZXhwIjoxNzYzNTI5NTUzfQ.1pyggv-JXabmWCYMgvKrc4lza4zbotDMOhiuy1ZDxiM"}}
+2025-11-18 10:49:13 [INFO]: 📥 GET /uploads/profiles/13_1757909107128.jpg - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36 Edg/142.0.0.0
+2025-11-18 10:49:13 [INFO]: 📥 GET /api/leave/summary?year=2025 - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36 Edg/142.0.0.0
+2025-11-18 10:49:13 [INFO]: 📤 GET /api/leave/summary?year=2025 - Status: 200 - Duration: 25ms
+2025-11-18 10:49:13 [INFO]: 📋 Response: {"success":true,"data":{"year":2025,"applicationsSummary":{"pending":1,"approved":1,"rejected":1},"categoryUsage":[{"category_name":"Casual","total_allocated":"79","total_used":"2","doctors_count":2},{"category_name":"Medical","total_allocated":"30","total_used":"0","doctors_count":1},{"category_name":"One Shot","total_allocated":"30","total_used":"0","doctors_count":1},{"category_name":"Paid","total_allocated":"30","total_used":"0","doctors_count":1},{"category_name":"Test","total_allocated":"20","total_used":"0","doctors_count":1}],"topRequesters":[{"doctor_name":"Mithu","employee_id":"mithu12","department":"ENT","applications_count":3,"approved_days":"2"}]}}
+2025-11-18 10:50:15 [INFO]: 📥 GET /api/auth/profile - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36 Edg/142.0.0.0
+2025-11-18 10:50:15 [INFO]: 📤 GET /api/auth/profile - Status: 200 - Duration: 9ms
+2025-11-18 10:50:15 [INFO]: 📋 Response: {"success":true,"data":{"user":{"id":13,"name":"Hospital Administrator","email":"admin@hospital.com","role":"admin","department":"Administration","phone":"+1234567890","employee_id":"ADMIN001","profile_picture":"/uploads/profiles/13_1757909107128.jpg","created_at":"2025-09-10T17:24:50.000Z","updated_at":"2025-09-15T04:05:07.000Z"}}}
+2025-11-18 10:50:15 [INFO]: 📥 GET /api/auth/profile - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36 Edg/142.0.0.0
+2025-11-18 10:50:15 [INFO]: 📤 GET /api/auth/profile - Status: 200 - Duration: 8ms
+2025-11-18 10:50:15 [INFO]: 📋 Response: {"success":true,"data":{"user":{"id":13,"name":"Hospital Administrator","email":"admin@hospital.com","role":"admin","department":"Administration","phone":"+1234567890","employee_id":"ADMIN001","profile_picture":"/uploads/profiles/13_1757909107128.jpg","created_at":"2025-09-10T17:24:50.000Z","updated_at":"2025-09-15T04:05:07.000Z"}}}
+2025-11-18 10:50:15 [INFO]: 📥 GET /uploads/profiles/13_1757909107128.jpg - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36 Edg/142.0.0.0
+2025-11-18 10:50:15 [INFO]: 📥 GET /api/leave/summary?year=2025 - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36 Edg/142.0.0.0
+2025-11-18 10:50:15 [INFO]: 📤 GET /api/leave/summary?year=2025 - Status: 200 - Duration: 6ms
+2025-11-18 10:50:15 [INFO]: 📋 Response: {"success":true,"data":{"year":2025,"applicationsSummary":{"pending":1,"approved":1,"rejected":1},"categoryUsage":[{"category_name":"Casual","total_allocated":"79","total_used":"2","doctors_count":2},{"category_name":"Medical","total_allocated":"30","total_used":"0","doctors_count":1},{"category_name":"One Shot","total_allocated":"30","total_used":"0","doctors_count":1},{"category_name":"Paid","total_allocated":"30","total_used":"0","doctors_count":1},{"category_name":"Test","total_allocated":"20","total_used":"0","doctors_count":1}],"topRequesters":[{"doctor_name":"Mithu","employee_id":"mithu12","department":"ENT","applications_count":3,"approved_days":"2"}]}}
+2025-11-18 10:50:15 [INFO]: 📥 GET /api/leave/summary?year=2025 - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36 Edg/142.0.0.0
+2025-11-18 10:50:15 [INFO]: 📤 GET /api/leave/summary?year=2025 - Status: 200 - Duration: 7ms
+2025-11-18 10:50:15 [INFO]: 📋 Response: {"success":true,"data":{"year":2025,"applicationsSummary":{"pending":1,"approved":1,"rejected":1},"categoryUsage":[{"category_name":"Casual","total_allocated":"79","total_used":"2","doctors_count":2},{"category_name":"Medical","total_allocated":"30","total_used":"0","doctors_count":1},{"category_name":"One Shot","total_allocated":"30","total_used":"0","doctors_count":1},{"category_name":"Paid","total_allocated":"30","total_used":"0","doctors_count":1},{"category_name":"Test","total_allocated":"20","total_used":"0","doctors_count":1}],"topRequesters":[{"doctor_name":"Mithu","employee_id":"mithu12","department":"ENT","applications_count":3,"approved_days":"2"}]}}
+2025-11-18 10:51:06 [INFO]: 📥 POST /api/auth/logout - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36 Edg/142.0.0.0
+2025-11-18 10:51:06 [INFO]: ✅ User logged out: admin@hospital.com
+2025-11-18 10:51:06 [INFO]: 📤 POST /api/auth/logout - Status: 200 - Duration: 5ms
+2025-11-18 10:51:06 [INFO]: 📋 Response: {"success":true,"message":"Logged out successfully"}
+2025-11-18 10:51:16 [INFO]: 📥 POST /api/auth/login - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36 Edg/142.0.0.0
+2025-11-18 10:51:16 [INFO]: 📄 Request Body: {"email":"mithu@gmail.com","password":"[HIDDEN]"}
+2025-11-18 10:51:16 [INFO]: ✅ User logged in: mithu@gmail.com (doctor)
+2025-11-18 10:51:16 [INFO]: 📤 POST /api/auth/login - Status: 200 - Duration: 300ms
+2025-11-18 10:51:16 [INFO]: 📋 Response: {"success":true,"message":"Login successful","data":{"user":{"id":15,"name":"Mithu","email":"mithu@gmail.com","role":"doctor","department":"ENT","phone":"9861500797","employee_id":"mithu12","profile_picture":"/uploads/profiles/15_1757699501913.jpg","is_active":1},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE1LCJlbWFpbCI6Im1pdGh1QGdtYWlsLmNvbSIsInJvbGUiOiJkb2N0b3IiLCJpYXQiOjE3NjM0NDMyNzYsImV4cCI6MTc2MzUyOTY3Nn0.XXYfla7MLVVY3YQorJ4U8Oqq_JoqBJtxUD1bI6SOF4U"}}
+2025-11-18 10:51:16 [INFO]: 📥 GET /uploads/profiles/15_1757699501913.jpg - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36 Edg/142.0.0.0
+2025-11-18 10:51:16 [INFO]: 📥 GET /api/doctor/dashboard - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36 Edg/142.0.0.0
+2025-11-18 10:51:16 [INFO]: 📤 GET /api/doctor/dashboard - Status: 200 - Duration: 16ms
+2025-11-18 10:51:16 [INFO]: 📋 Response: [Large response - 1951 characters]
+2025-11-18 10:51:16 [INFO]: 📥 GET /api/doctor/dashboard - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36 Edg/142.0.0.0
+2025-11-18 10:51:16 [INFO]: 📤 GET /api/doctor/dashboard - Status: 200 - Duration: 9ms
+2025-11-18 10:51:16 [INFO]: 📋 Response: [Large response - 1951 characters]
+2025-11-18 10:51:34 [INFO]: 📥 GET /api/leave/categories?status=active - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36 Edg/142.0.0.0
+2025-11-18 10:51:34 [INFO]: 📥 GET /api/leave/balance - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36 Edg/142.0.0.0
+2025-11-18 10:51:34 [INFO]: 📥 GET /api/doctor/dashboard - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36 Edg/142.0.0.0
+2025-11-18 10:51:34 [INFO]: 📤 GET /api/leave/categories?status=active - Status: 200 - Duration: 21ms
+2025-11-18 10:51:34 [INFO]: 📋 Response: {"success":true,"data":{"categories":[{"id":1,"name":"Casual","max_days":3,"description":"Casual leave for personal reasons","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"},{"id":2,"name":"Medical","max_days":7,"description":"Medical leave for health issues","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"},{"id":4,"name":"One Shot","max_days":20,"description":"20day emergency leave One Shot","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"}]}}
+2025-11-18 10:51:34 [INFO]: 📥 GET /api/leave/categories?status=active - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36 Edg/142.0.0.0
+2025-11-18 10:51:34 [INFO]: 📤 GET /api/leave/categories?status=active - Status: 200 - Duration: 5ms
+2025-11-18 10:51:34 [INFO]: 📋 Response: {"success":true,"data":{"categories":[{"id":1,"name":"Casual","max_days":3,"description":"Casual leave for personal reasons","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"},{"id":2,"name":"Medical","max_days":7,"description":"Medical leave for health issues","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"},{"id":4,"name":"One Shot","max_days":20,"description":"20day emergency leave One Shot","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"}]}}
+2025-11-18 10:51:34 [INFO]: 📤 GET /api/leave/balance - Status: 200 - Duration: 30ms
+2025-11-18 10:51:34 [INFO]: 📋 Response: {"success":true,"data":{"balance":[{"category_id":1,"category_name":"Casual","total_days":29,"used_days":2,"remaining_days":27,"max_days":3},{"category_id":2,"category_name":"Medical","total_days":30,"used_days":0,"remaining_days":30,"max_days":7},{"category_id":4,"category_name":"One Shot","total_days":30,"used_days":0,"remaining_days":30,"max_days":20},{"category_id":3,"category_name":"Paid","total_days":30,"used_days":0,"remaining_days":30,"max_days":15},{"category_id":5,"category_name":"Test","total_days":20,"used_days":0,"remaining_days":20,"max_days":20}],"year":2025}}
+2025-11-18 10:51:34 [INFO]: 📥 GET /api/leave/balance - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36 Edg/142.0.0.0
+2025-11-18 10:51:34 [INFO]: 📤 GET /api/leave/balance - Status: 200 - Duration: 3ms
+2025-11-18 10:51:34 [INFO]: 📋 Response: {"success":true,"data":{"balance":[{"category_id":1,"category_name":"Casual","total_days":29,"used_days":2,"remaining_days":27,"max_days":3},{"category_id":2,"category_name":"Medical","total_days":30,"used_days":0,"remaining_days":30,"max_days":7},{"category_id":4,"category_name":"One Shot","total_days":30,"used_days":0,"remaining_days":30,"max_days":20},{"category_id":3,"category_name":"Paid","total_days":30,"used_days":0,"remaining_days":30,"max_days":15},{"category_id":5,"category_name":"Test","total_days":20,"used_days":0,"remaining_days":20,"max_days":20}],"year":2025}}
+2025-11-18 10:51:34 [INFO]: 📤 GET /api/doctor/dashboard - Status: 200 - Duration: 34ms
+2025-11-18 10:51:34 [INFO]: 📋 Response: [Large response - 1951 characters]
+2025-11-18 10:51:34 [INFO]: 📥 GET /api/doctor/dashboard - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36 Edg/142.0.0.0
+2025-11-18 10:51:34 [INFO]: 📤 GET /api/doctor/dashboard - Status: 200 - Duration: 6ms
+2025-11-18 10:51:34 [INFO]: 📋 Response: [Large response - 1951 characters]
