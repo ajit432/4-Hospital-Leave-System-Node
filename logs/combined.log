@@ -1376,3 +1376,348 @@
 2025-09-16 17:40:24 [INFO]: 📤 GET /api/doctor/dashboard - Status: 200 - Duration: 6ms
 2025-09-16 17:40:24 [INFO]: 📋 Response: [Large response - 1951 characters]
 2025-09-16 17:44:41 [INFO]: SIGINT received. Shutting down gracefully...
+2025-09-17 09:05:28 [INFO]: 🚀 Server started on port 5000
+2025-09-17 09:05:28 [INFO]: 🏥 Hospital Leave Management System API
+2025-09-17 09:05:28 [INFO]: 📍 Health check: http://localhost:5000/health
+2025-09-17 09:05:28 [INFO]: 📋 API documentation: http://localhost:5000/
+2025-09-17 09:05:28 [INFO]: 🌍 Environment: development
+2025-09-17 09:06:21 [INFO]: 📥 GET /api/auth/profile - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 09:06:21 [INFO]: 📤 GET /api/auth/profile - Status: 200 - Duration: 112ms
+2025-09-17 09:06:21 [INFO]: 📋 Response: {"success":true,"data":{"user":{"id":15,"name":"Mithu","email":"mithu@gmail.com","role":"doctor","department":"ENT","phone":"9861500797","employee_id":"mithu12","profile_picture":"/uploads/profiles/15_1757699501913.jpg","created_at":"2025-09-11T03:43:19.000Z","updated_at":"2025-09-12T18:01:53.000Z"}}}
+2025-09-17 09:06:21 [INFO]: 📥 GET /api/auth/profile - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 09:06:21 [INFO]: 📤 GET /api/auth/profile - Status: 200 - Duration: 8ms
+2025-09-17 09:06:21 [INFO]: 📋 Response: {"success":true,"data":{"user":{"id":15,"name":"Mithu","email":"mithu@gmail.com","role":"doctor","department":"ENT","phone":"9861500797","employee_id":"mithu12","profile_picture":"/uploads/profiles/15_1757699501913.jpg","created_at":"2025-09-11T03:43:19.000Z","updated_at":"2025-09-12T18:01:53.000Z"}}}
+2025-09-17 09:06:21 [INFO]: 📥 GET /uploads/profiles/15_1757699501913.jpg - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 09:06:21 [INFO]: 📥 GET /api/doctor/dashboard - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 09:06:21 [INFO]: 📤 GET /api/doctor/dashboard - Status: 200 - Duration: 66ms
+2025-09-17 09:06:21 [INFO]: 📋 Response: [Large response - 1951 characters]
+2025-09-17 09:06:21 [INFO]: 📥 GET /api/doctor/dashboard - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 09:06:21 [INFO]: 📤 GET /api/doctor/dashboard - Status: 200 - Duration: 12ms
+2025-09-17 09:06:21 [INFO]: 📋 Response: [Large response - 1951 characters]
+2025-09-17 09:06:26 [INFO]: 📥 POST /api/auth/logout - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 09:06:26 [INFO]: ✅ User logged out: mithu@gmail.com
+2025-09-17 09:06:26 [INFO]: 📤 POST /api/auth/logout - Status: 200 - Duration: 8ms
+2025-09-17 09:06:26 [INFO]: 📋 Response: {"success":true,"message":"Logged out successfully"}
+2025-09-17 09:06:38 [INFO]: 📥 POST /api/auth/login - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 09:06:38 [INFO]: 📄 Request Body: {"email":"admin@hospital.com","password":"[HIDDEN]"}
+2025-09-17 09:06:38 [INFO]: ✅ User logged in: admin@hospital.com (admin)
+2025-09-17 09:06:38 [INFO]: 📤 POST /api/auth/login - Status: 200 - Duration: 356ms
+2025-09-17 09:06:38 [INFO]: 📋 Response: {"success":true,"message":"Login successful","data":{"user":{"id":13,"name":"Hospital Administrator","email":"admin@hospital.com","role":"admin","department":"Administration","phone":"+1234567890","employee_id":"ADMIN001","profile_picture":"/uploads/profiles/13_1757909107128.jpg","is_active":1},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEzLCJlbWFpbCI6ImFkbWluQGhvc3BpdGFsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1ODA4MDE5OCwiZXhwIjoxNzU4MTY2NTk4fQ.d0ZLVnw_mTJPyAegGyoRx7ba4G7TNDp6dcncCC76EAg"}}
+2025-09-17 09:06:38 [INFO]: 📥 GET /uploads/profiles/13_1757909107128.jpg - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 09:06:38 [INFO]: 📥 GET /api/leave/summary?year=2025 - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 09:06:38 [INFO]: 📤 GET /api/leave/summary?year=2025 - Status: 200 - Duration: 8ms
+2025-09-17 09:06:38 [INFO]: 📋 Response: {"success":true,"data":{"year":2025,"applicationsSummary":{"pending":1,"approved":1,"rejected":1},"categoryUsage":[{"category_name":"Casual","total_allocated":"79","total_used":"2","doctors_count":2},{"category_name":"Medical","total_allocated":"30","total_used":"0","doctors_count":1},{"category_name":"One Shot","total_allocated":"30","total_used":"0","doctors_count":1},{"category_name":"Paid","total_allocated":"30","total_used":"0","doctors_count":1},{"category_name":"Test","total_allocated":"20","total_used":"0","doctors_count":1}],"topRequesters":[{"doctor_name":"Mithu","employee_id":"mithu12","department":"ENT","applications_count":3,"approved_days":"2"}]}}
+2025-09-17 09:06:38 [INFO]: 📥 GET /api/leave/summary?year=2025 - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 09:06:38 [INFO]: 📤 GET /api/leave/summary?year=2025 - Status: 200 - Duration: 5ms
+2025-09-17 09:06:38 [INFO]: 📋 Response: {"success":true,"data":{"year":2025,"applicationsSummary":{"pending":1,"approved":1,"rejected":1},"categoryUsage":[{"category_name":"Casual","total_allocated":"79","total_used":"2","doctors_count":2},{"category_name":"Medical","total_allocated":"30","total_used":"0","doctors_count":1},{"category_name":"One Shot","total_allocated":"30","total_used":"0","doctors_count":1},{"category_name":"Paid","total_allocated":"30","total_used":"0","doctors_count":1},{"category_name":"Test","total_allocated":"20","total_used":"0","doctors_count":1}],"topRequesters":[{"doctor_name":"Mithu","employee_id":"mithu12","department":"ENT","applications_count":3,"approved_days":"2"}]}}
+2025-09-17 09:06:41 [INFO]: 📥 GET /api/leave/categories?status=active - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 09:06:41 [INFO]: 📤 GET /api/leave/categories?status=active - Status: 200 - Duration: 6ms
+2025-09-17 09:06:41 [INFO]: 📋 Response: {"success":true,"data":{"categories":[{"id":1,"name":"Casual","max_days":3,"description":"Casual leave for personal reasons","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"},{"id":2,"name":"Medical","max_days":7,"description":"Medical leave for health issues","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"},{"id":4,"name":"One Shot","max_days":20,"description":"20day emergency leave One Shot","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"},{"id":3,"name":"Paid","max_days":15,"description":"Paid leave for vacation","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"}]}}
+2025-09-17 09:06:41 [INFO]: 📥 GET /api/leave/categories?status=active - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 09:06:41 [INFO]: 📤 GET /api/leave/categories?status=active - Status: 200 - Duration: 5ms
+2025-09-17 09:06:41 [INFO]: 📋 Response: {"success":true,"data":{"categories":[{"id":1,"name":"Casual","max_days":3,"description":"Casual leave for personal reasons","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"},{"id":2,"name":"Medical","max_days":7,"description":"Medical leave for health issues","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"},{"id":4,"name":"One Shot","max_days":20,"description":"20day emergency leave One Shot","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"},{"id":3,"name":"Paid","max_days":15,"description":"Paid leave for vacation","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"}]}}
+2025-09-17 09:06:52 [INFO]: 📥 PUT /api/leave/categories/3/deactivate - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 09:06:52 [INFO]: ✅ Leave category deactivated: Paid (ID: 3) by admin: admin@hospital.com
+2025-09-17 09:06:52 [INFO]: 📤 PUT /api/leave/categories/3/deactivate - Status: 200 - Duration: 10ms
+2025-09-17 09:06:52 [INFO]: 📋 Response: {"success":true,"message":"Leave category deactivated successfully","data":{"category":{"id":3,"name":"Paid","is_active":0}}}
+2025-09-17 09:06:52 [INFO]: 📥 GET /api/leave/categories?status=active - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 09:06:52 [INFO]: 📤 GET /api/leave/categories?status=active - Status: 200 - Duration: 4ms
+2025-09-17 09:06:52 [INFO]: 📋 Response: {"success":true,"data":{"categories":[{"id":1,"name":"Casual","max_days":3,"description":"Casual leave for personal reasons","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"},{"id":2,"name":"Medical","max_days":7,"description":"Medical leave for health issues","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"},{"id":4,"name":"One Shot","max_days":20,"description":"20day emergency leave One Shot","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"}]}}
+2025-09-17 10:10:22 [INFO]: 📥 POST /api/auth/logout - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 10:10:22 [INFO]: ✅ User logged out: admin@hospital.com
+2025-09-17 10:10:22 [INFO]: 📤 POST /api/auth/logout - Status: 200 - Duration: 12ms
+2025-09-17 10:10:22 [INFO]: 📋 Response: {"success":true,"message":"Logged out successfully"}
+2025-09-17 10:12:53 [INFO]: 📥 POST /api/auth/login - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 10:12:53 [INFO]: 📄 Request Body: {"email":"mithu@gmail.com","password":"[HIDDEN]"}
+2025-09-17 10:12:53 [INFO]: ✅ User logged in: mithu@gmail.com (doctor)
+2025-09-17 10:12:53 [INFO]: 📤 POST /api/auth/login - Status: 200 - Duration: 359ms
+2025-09-17 10:12:53 [INFO]: 📋 Response: {"success":true,"message":"Login successful","data":{"user":{"id":15,"name":"Mithu","email":"mithu@gmail.com","role":"doctor","department":"ENT","phone":"9861500797","employee_id":"mithu12","profile_picture":"/uploads/profiles/15_1757699501913.jpg","is_active":1},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE1LCJlbWFpbCI6Im1pdGh1QGdtYWlsLmNvbSIsInJvbGUiOiJkb2N0b3IiLCJpYXQiOjE3NTgwODQxNzMsImV4cCI6MTc1ODE3MDU3M30.tpcs7X2b-wxfcu16MwABiFqVOPFD7rLLQJR413O3NF8"}}
+2025-09-17 10:12:53 [INFO]: 📥 GET /uploads/profiles/15_1757699501913.jpg - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 10:12:53 [INFO]: 📥 GET /api/doctor/dashboard - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 10:12:53 [INFO]: 📤 GET /api/doctor/dashboard - Status: 200 - Duration: 22ms
+2025-09-17 10:12:53 [INFO]: 📋 Response: [Large response - 1951 characters]
+2025-09-17 12:32:34 [INFO]: 📥 POST /api/auth/logout - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 12:32:34 [INFO]: ✅ User logged out: mithu@gmail.com
+2025-09-17 12:32:34 [INFO]: 📤 POST /api/auth/logout - Status: 200 - Duration: 46ms
+2025-09-17 12:32:34 [INFO]: 📋 Response: {"success":true,"message":"Logged out successfully"}
+2025-09-17 12:45:10 [INFO]: 📥 POST /api/auth/login - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 12:45:10 [INFO]: 📄 Request Body: {"email":"mithu@gmail.com","password":"[HIDDEN]"}
+2025-09-17 12:45:10 [INFO]: ✅ User logged in: mithu@gmail.com (doctor)
+2025-09-17 12:45:10 [INFO]: 📤 POST /api/auth/login - Status: 200 - Duration: 388ms
+2025-09-17 12:45:10 [INFO]: 📋 Response: {"success":true,"message":"Login successful","data":{"user":{"id":15,"name":"Mithu","email":"mithu@gmail.com","role":"doctor","department":"ENT","phone":"9861500797","employee_id":"mithu12","profile_picture":"/uploads/profiles/15_1757699501913.jpg","is_active":1},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE1LCJlbWFpbCI6Im1pdGh1QGdtYWlsLmNvbSIsInJvbGUiOiJkb2N0b3IiLCJpYXQiOjE3NTgwOTMzMTAsImV4cCI6MTc1ODE3OTcxMH0.NQSkdEsSvCMINmTt2xu065-ruOnuwy-41lWeZ1scAIs"}}
+2025-09-17 12:45:10 [INFO]: 📥 GET /uploads/profiles/15_1757699501913.jpg - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 12:45:10 [INFO]: 📥 GET /api/doctor/dashboard - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 12:45:10 [INFO]: 📤 GET /api/doctor/dashboard - Status: 200 - Duration: 25ms
+2025-09-17 12:45:10 [INFO]: 📋 Response: [Large response - 1951 characters]
+2025-09-17 14:21:51 [INFO]: 📥 GET /api/auth/profile - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 14:21:51 [INFO]: 📤 GET /api/auth/profile - Status: 200 - Duration: 49ms
+2025-09-17 14:21:51 [INFO]: 📋 Response: {"success":true,"data":{"user":{"id":15,"name":"Mithu","email":"mithu@gmail.com","role":"doctor","department":"ENT","phone":"9861500797","employee_id":"mithu12","profile_picture":"/uploads/profiles/15_1757699501913.jpg","created_at":"2025-09-11T03:43:19.000Z","updated_at":"2025-09-12T18:01:53.000Z"}}}
+2025-09-17 14:21:51 [INFO]: 📥 GET /uploads/profiles/15_1757699501913.jpg - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 14:21:51 [INFO]: 📥 GET /api/doctor/dashboard - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 14:21:51 [INFO]: 📤 GET /api/doctor/dashboard - Status: 200 - Duration: 31ms
+2025-09-17 14:21:51 [INFO]: 📋 Response: [Large response - 1951 characters]
+2025-09-17 14:23:35 [INFO]: 📥 GET /api/doctor/dashboard - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 14:23:35 [INFO]: 📤 GET /api/doctor/dashboard - Status: 200 - Duration: 9ms
+2025-09-17 14:23:35 [INFO]: 📋 Response: [Large response - 1951 characters]
+2025-09-17 14:23:41 [INFO]: 📥 GET /api/doctor/dashboard - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 14:23:41 [INFO]: 📤 GET /api/doctor/dashboard - Status: 200 - Duration: 30ms
+2025-09-17 14:23:41 [INFO]: 📋 Response: [Large response - 1951 characters]
+2025-09-17 14:30:19 [INFO]: 📥 GET /api/leave/my-leaves?page=1&limit=10 - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 14:30:19 [INFO]: 📤 GET /api/leave/my-leaves?page=1&limit=10 - Status: 200 - Duration: 47ms
+2025-09-17 14:30:19 [INFO]: 📋 Response: [Large response - 1139 characters]
+2025-09-17 14:30:22 [INFO]: 📥 GET /api/leave/categories?status=active - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 14:30:22 [INFO]: 📥 GET /api/doctor/dashboard - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 14:30:22 [INFO]: 📥 GET /api/leave/balance - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 14:30:22 [INFO]: 📤 GET /api/leave/categories?status=active - Status: 200 - Duration: 48ms
+2025-09-17 14:30:22 [INFO]: 📋 Response: {"success":true,"data":{"categories":[{"id":1,"name":"Casual","max_days":3,"description":"Casual leave for personal reasons","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"},{"id":2,"name":"Medical","max_days":7,"description":"Medical leave for health issues","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"},{"id":4,"name":"One Shot","max_days":20,"description":"20day emergency leave One Shot","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"}]}}
+2025-09-17 14:30:22 [INFO]: 📤 GET /api/leave/balance - Status: 200 - Duration: 33ms
+2025-09-17 14:30:22 [INFO]: 📋 Response: {"success":true,"data":{"balance":[{"category_id":1,"category_name":"Casual","total_days":29,"used_days":2,"remaining_days":27,"max_days":3},{"category_id":2,"category_name":"Medical","total_days":30,"used_days":0,"remaining_days":30,"max_days":7},{"category_id":4,"category_name":"One Shot","total_days":30,"used_days":0,"remaining_days":30,"max_days":20},{"category_id":3,"category_name":"Paid","total_days":30,"used_days":0,"remaining_days":30,"max_days":15},{"category_id":5,"category_name":"Test","total_days":20,"used_days":0,"remaining_days":20,"max_days":20}],"year":2025}}
+2025-09-17 14:30:22 [INFO]: 📤 GET /api/doctor/dashboard - Status: 200 - Duration: 73ms
+2025-09-17 14:30:22 [INFO]: 📋 Response: [Large response - 1951 characters]
+2025-09-17 14:33:16 [INFO]: 📥 GET /api/auth/profile - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 14:33:16 [INFO]: 📤 GET /api/auth/profile - Status: 200 - Duration: 5ms
+2025-09-17 14:33:16 [INFO]: 📋 Response: {"success":true,"data":{"user":{"id":15,"name":"Mithu","email":"mithu@gmail.com","role":"doctor","department":"ENT","phone":"9861500797","employee_id":"mithu12","profile_picture":"/uploads/profiles/15_1757699501913.jpg","created_at":"2025-09-11T03:43:19.000Z","updated_at":"2025-09-12T18:01:53.000Z"}}}
+2025-09-17 14:33:16 [INFO]: 📥 GET /uploads/profiles/15_1757699501913.jpg - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 14:33:16 [INFO]: 📥 GET /api/leave/categories?status=active - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 14:33:16 [INFO]: 📥 GET /api/leave/balance - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 14:33:16 [INFO]: 📥 GET /api/doctor/dashboard - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 14:33:16 [INFO]: 📤 GET /api/leave/balance - Status: 200 - Duration: 21ms
+2025-09-17 14:33:16 [INFO]: 📋 Response: {"success":true,"data":{"balance":[{"category_id":1,"category_name":"Casual","total_days":29,"used_days":2,"remaining_days":27,"max_days":3},{"category_id":2,"category_name":"Medical","total_days":30,"used_days":0,"remaining_days":30,"max_days":7},{"category_id":4,"category_name":"One Shot","total_days":30,"used_days":0,"remaining_days":30,"max_days":20},{"category_id":3,"category_name":"Paid","total_days":30,"used_days":0,"remaining_days":30,"max_days":15},{"category_id":5,"category_name":"Test","total_days":20,"used_days":0,"remaining_days":20,"max_days":20}],"year":2025}}
+2025-09-17 14:33:16 [INFO]: 📤 GET /api/leave/categories?status=active - Status: 200 - Duration: 33ms
+2025-09-17 14:33:16 [INFO]: 📋 Response: {"success":true,"data":{"categories":[{"id":1,"name":"Casual","max_days":3,"description":"Casual leave for personal reasons","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"},{"id":2,"name":"Medical","max_days":7,"description":"Medical leave for health issues","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"},{"id":4,"name":"One Shot","max_days":20,"description":"20day emergency leave One Shot","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"}]}}
+2025-09-17 14:33:16 [INFO]: 📤 GET /api/doctor/dashboard - Status: 200 - Duration: 29ms
+2025-09-17 14:33:16 [INFO]: 📋 Response: [Large response - 1951 characters]
+2025-09-17 14:33:18 [INFO]: 📥 GET /api/auth/profile - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 14:33:18 [INFO]: 📤 GET /api/auth/profile - Status: 200 - Duration: 7ms
+2025-09-17 14:33:18 [INFO]: 📋 Response: {"success":true,"data":{"user":{"id":15,"name":"Mithu","email":"mithu@gmail.com","role":"doctor","department":"ENT","phone":"9861500797","employee_id":"mithu12","profile_picture":"/uploads/profiles/15_1757699501913.jpg","created_at":"2025-09-11T03:43:19.000Z","updated_at":"2025-09-12T18:01:53.000Z"}}}
+2025-09-17 14:33:18 [INFO]: 📥 GET /uploads/profiles/15_1757699501913.jpg - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 14:33:18 [INFO]: 📥 GET /api/leave/categories?status=active - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 14:33:18 [INFO]: 📥 GET /api/leave/balance - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 14:33:18 [INFO]: 📥 GET /api/doctor/dashboard - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 14:33:18 [INFO]: 📤 GET /api/leave/categories?status=active - Status: 200 - Duration: 16ms
+2025-09-17 14:33:18 [INFO]: 📋 Response: {"success":true,"data":{"categories":[{"id":1,"name":"Casual","max_days":3,"description":"Casual leave for personal reasons","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"},{"id":2,"name":"Medical","max_days":7,"description":"Medical leave for health issues","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"},{"id":4,"name":"One Shot","max_days":20,"description":"20day emergency leave One Shot","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"}]}}
+2025-09-17 14:33:18 [INFO]: 📤 GET /api/leave/balance - Status: 200 - Duration: 33ms
+2025-09-17 14:33:18 [INFO]: 📋 Response: {"success":true,"data":{"balance":[{"category_id":1,"category_name":"Casual","total_days":29,"used_days":2,"remaining_days":27,"max_days":3},{"category_id":2,"category_name":"Medical","total_days":30,"used_days":0,"remaining_days":30,"max_days":7},{"category_id":4,"category_name":"One Shot","total_days":30,"used_days":0,"remaining_days":30,"max_days":20},{"category_id":3,"category_name":"Paid","total_days":30,"used_days":0,"remaining_days":30,"max_days":15},{"category_id":5,"category_name":"Test","total_days":20,"used_days":0,"remaining_days":20,"max_days":20}],"year":2025}}
+2025-09-17 14:33:18 [INFO]: 📤 GET /api/doctor/dashboard - Status: 200 - Duration: 57ms
+2025-09-17 14:33:18 [INFO]: 📋 Response: [Large response - 1951 characters]
+2025-09-17 14:33:24 [INFO]: 📥 GET /api/auth/profile - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 14:33:24 [INFO]: 📤 GET /api/auth/profile - Status: 200 - Duration: 7ms
+2025-09-17 14:33:24 [INFO]: 📋 Response: {"success":true,"data":{"user":{"id":15,"name":"Mithu","email":"mithu@gmail.com","role":"doctor","department":"ENT","phone":"9861500797","employee_id":"mithu12","profile_picture":"/uploads/profiles/15_1757699501913.jpg","created_at":"2025-09-11T03:43:19.000Z","updated_at":"2025-09-12T18:01:53.000Z"}}}
+2025-09-17 14:33:24 [INFO]: 📥 GET /uploads/profiles/15_1757699501913.jpg - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 14:33:24 [INFO]: 📥 GET /api/leave/categories?status=active - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 14:33:24 [INFO]: 📥 GET /api/doctor/dashboard - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 14:33:24 [INFO]: 📥 GET /api/leave/balance - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 14:33:24 [INFO]: 📤 GET /api/leave/categories?status=active - Status: 200 - Duration: 15ms
+2025-09-17 14:33:24 [INFO]: 📋 Response: {"success":true,"data":{"categories":[{"id":1,"name":"Casual","max_days":3,"description":"Casual leave for personal reasons","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"},{"id":2,"name":"Medical","max_days":7,"description":"Medical leave for health issues","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"},{"id":4,"name":"One Shot","max_days":20,"description":"20day emergency leave One Shot","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"}]}}
+2025-09-17 14:33:24 [INFO]: 📤 GET /api/leave/balance - Status: 200 - Duration: 21ms
+2025-09-17 14:33:24 [INFO]: 📋 Response: {"success":true,"data":{"balance":[{"category_id":1,"category_name":"Casual","total_days":29,"used_days":2,"remaining_days":27,"max_days":3},{"category_id":2,"category_name":"Medical","total_days":30,"used_days":0,"remaining_days":30,"max_days":7},{"category_id":4,"category_name":"One Shot","total_days":30,"used_days":0,"remaining_days":30,"max_days":20},{"category_id":3,"category_name":"Paid","total_days":30,"used_days":0,"remaining_days":30,"max_days":15},{"category_id":5,"category_name":"Test","total_days":20,"used_days":0,"remaining_days":20,"max_days":20}],"year":2025}}
+2025-09-17 14:33:24 [INFO]: 📤 GET /api/doctor/dashboard - Status: 200 - Duration: 39ms
+2025-09-17 14:33:24 [INFO]: 📋 Response: [Large response - 1951 characters]
+2025-09-17 14:33:26 [INFO]: 📥 GET /api/auth/profile - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 14:33:26 [INFO]: 📤 GET /api/auth/profile - Status: 200 - Duration: 4ms
+2025-09-17 14:33:26 [INFO]: 📋 Response: {"success":true,"data":{"user":{"id":15,"name":"Mithu","email":"mithu@gmail.com","role":"doctor","department":"ENT","phone":"9861500797","employee_id":"mithu12","profile_picture":"/uploads/profiles/15_1757699501913.jpg","created_at":"2025-09-11T03:43:19.000Z","updated_at":"2025-09-12T18:01:53.000Z"}}}
+2025-09-17 14:33:26 [INFO]: 📥 GET /uploads/profiles/15_1757699501913.jpg - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 14:33:26 [INFO]: 📥 GET /api/leave/categories?status=active - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 14:33:26 [INFO]: 📥 GET /api/leave/balance - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 14:33:26 [INFO]: 📥 GET /api/doctor/dashboard - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 14:33:26 [INFO]: 📤 GET /api/leave/categories?status=active - Status: 200 - Duration: 20ms
+2025-09-17 14:33:26 [INFO]: 📋 Response: {"success":true,"data":{"categories":[{"id":1,"name":"Casual","max_days":3,"description":"Casual leave for personal reasons","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"},{"id":2,"name":"Medical","max_days":7,"description":"Medical leave for health issues","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"},{"id":4,"name":"One Shot","max_days":20,"description":"20day emergency leave One Shot","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"}]}}
+2025-09-17 14:33:26 [INFO]: 📤 GET /api/leave/balance - Status: 200 - Duration: 24ms
+2025-09-17 14:33:26 [INFO]: 📋 Response: {"success":true,"data":{"balance":[{"category_id":1,"category_name":"Casual","total_days":29,"used_days":2,"remaining_days":27,"max_days":3},{"category_id":2,"category_name":"Medical","total_days":30,"used_days":0,"remaining_days":30,"max_days":7},{"category_id":4,"category_name":"One Shot","total_days":30,"used_days":0,"remaining_days":30,"max_days":20},{"category_id":3,"category_name":"Paid","total_days":30,"used_days":0,"remaining_days":30,"max_days":15},{"category_id":5,"category_name":"Test","total_days":20,"used_days":0,"remaining_days":20,"max_days":20}],"year":2025}}
+2025-09-17 14:33:26 [INFO]: 📤 GET /api/doctor/dashboard - Status: 200 - Duration: 37ms
+2025-09-17 14:33:26 [INFO]: 📋 Response: [Large response - 1951 characters]
+2025-09-17 14:36:26 [INFO]: 📥 GET /api/auth/profile - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 14:36:26 [INFO]: 📤 GET /api/auth/profile - Status: 200 - Duration: 15ms
+2025-09-17 14:36:26 [INFO]: 📋 Response: {"success":true,"data":{"user":{"id":15,"name":"Mithu","email":"mithu@gmail.com","role":"doctor","department":"ENT","phone":"9861500797","employee_id":"mithu12","profile_picture":"/uploads/profiles/15_1757699501913.jpg","created_at":"2025-09-11T03:43:19.000Z","updated_at":"2025-09-12T18:01:53.000Z"}}}
+2025-09-17 14:36:26 [INFO]: 📥 GET /uploads/profiles/15_1757699501913.jpg - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 14:36:26 [INFO]: 📥 GET /api/leave/categories?status=active - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 14:36:26 [INFO]: 📥 GET /api/leave/balance - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 14:36:26 [INFO]: 📥 GET /api/doctor/dashboard - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 14:36:26 [INFO]: 📤 GET /api/leave/categories?status=active - Status: 200 - Duration: 111ms
+2025-09-17 14:36:26 [INFO]: 📋 Response: {"success":true,"data":{"categories":[{"id":1,"name":"Casual","max_days":3,"description":"Casual leave for personal reasons","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"},{"id":2,"name":"Medical","max_days":7,"description":"Medical leave for health issues","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"},{"id":4,"name":"One Shot","max_days":20,"description":"20day emergency leave One Shot","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"}]}}
+2025-09-17 14:36:26 [INFO]: 📤 GET /api/leave/balance - Status: 200 - Duration: 115ms
+2025-09-17 14:36:26 [INFO]: 📋 Response: {"success":true,"data":{"balance":[{"category_id":1,"category_name":"Casual","total_days":29,"used_days":2,"remaining_days":27,"max_days":3},{"category_id":2,"category_name":"Medical","total_days":30,"used_days":0,"remaining_days":30,"max_days":7},{"category_id":4,"category_name":"One Shot","total_days":30,"used_days":0,"remaining_days":30,"max_days":20},{"category_id":3,"category_name":"Paid","total_days":30,"used_days":0,"remaining_days":30,"max_days":15},{"category_id":5,"category_name":"Test","total_days":20,"used_days":0,"remaining_days":20,"max_days":20}],"year":2025}}
+2025-09-17 14:36:26 [INFO]: 📤 GET /api/doctor/dashboard - Status: 200 - Duration: 143ms
+2025-09-17 14:36:26 [INFO]: 📋 Response: [Large response - 1951 characters]
+2025-09-17 14:36:32 [INFO]: 📥 GET /api/auth/profile - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 14:36:32 [INFO]: 📤 GET /api/auth/profile - Status: 200 - Duration: 24ms
+2025-09-17 14:36:32 [INFO]: 📋 Response: {"success":true,"data":{"user":{"id":15,"name":"Mithu","email":"mithu@gmail.com","role":"doctor","department":"ENT","phone":"9861500797","employee_id":"mithu12","profile_picture":"/uploads/profiles/15_1757699501913.jpg","created_at":"2025-09-11T03:43:19.000Z","updated_at":"2025-09-12T18:01:53.000Z"}}}
+2025-09-17 14:36:32 [INFO]: 📥 GET /uploads/profiles/15_1757699501913.jpg - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 14:36:32 [INFO]: 📥 GET /api/leave/categories?status=active - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 14:36:32 [INFO]: 📥 GET /api/leave/balance - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 14:36:32 [INFO]: 📥 GET /api/doctor/dashboard - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 14:36:32 [INFO]: 📤 GET /api/leave/categories?status=active - Status: 200 - Duration: 54ms
+2025-09-17 14:36:32 [INFO]: 📋 Response: {"success":true,"data":{"categories":[{"id":1,"name":"Casual","max_days":3,"description":"Casual leave for personal reasons","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"},{"id":2,"name":"Medical","max_days":7,"description":"Medical leave for health issues","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"},{"id":4,"name":"One Shot","max_days":20,"description":"20day emergency leave One Shot","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"}]}}
+2025-09-17 14:36:32 [INFO]: 📤 GET /api/leave/balance - Status: 200 - Duration: 15ms
+2025-09-17 14:36:32 [INFO]: 📋 Response: {"success":true,"data":{"balance":[{"category_id":1,"category_name":"Casual","total_days":29,"used_days":2,"remaining_days":27,"max_days":3},{"category_id":2,"category_name":"Medical","total_days":30,"used_days":0,"remaining_days":30,"max_days":7},{"category_id":4,"category_name":"One Shot","total_days":30,"used_days":0,"remaining_days":30,"max_days":20},{"category_id":3,"category_name":"Paid","total_days":30,"used_days":0,"remaining_days":30,"max_days":15},{"category_id":5,"category_name":"Test","total_days":20,"used_days":0,"remaining_days":20,"max_days":20}],"year":2025}}
+2025-09-17 14:36:32 [INFO]: 📤 GET /api/doctor/dashboard - Status: 200 - Duration: 30ms
+2025-09-17 14:36:32 [INFO]: 📋 Response: [Large response - 1951 characters]
+2025-09-17 14:46:19 [INFO]: 📥 GET /api/doctor/dashboard - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 14:46:19 [INFO]: 📤 GET /api/doctor/dashboard - Status: 200 - Duration: 10ms
+2025-09-17 14:46:19 [INFO]: 📋 Response: [Large response - 1951 characters]
+2025-09-17 15:11:34 [INFO]: 📥 GET /api/doctor/dashboard - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 15:11:35 [INFO]: 📤 GET /api/doctor/dashboard - Status: 200 - Duration: 18ms
+2025-09-17 15:11:35 [INFO]: 📋 Response: [Large response - 1951 characters]
+2025-09-17 15:11:37 [INFO]: 📥 GET /api/leave/categories?status=active - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 15:11:37 [INFO]: 📥 GET /api/doctor/dashboard - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 15:11:37 [INFO]: 📥 GET /api/leave/balance - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 15:11:37 [INFO]: 📤 GET /api/leave/categories?status=active - Status: 200 - Duration: 14ms
+2025-09-17 15:11:37 [INFO]: 📋 Response: {"success":true,"data":{"categories":[{"id":1,"name":"Casual","max_days":3,"description":"Casual leave for personal reasons","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"},{"id":2,"name":"Medical","max_days":7,"description":"Medical leave for health issues","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"},{"id":4,"name":"One Shot","max_days":20,"description":"20day emergency leave One Shot","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"}]}}
+2025-09-17 15:11:37 [INFO]: 📤 GET /api/leave/balance - Status: 200 - Duration: 14ms
+2025-09-17 15:11:37 [INFO]: 📋 Response: {"success":true,"data":{"balance":[{"category_id":1,"category_name":"Casual","total_days":29,"used_days":2,"remaining_days":27,"max_days":3},{"category_id":2,"category_name":"Medical","total_days":30,"used_days":0,"remaining_days":30,"max_days":7},{"category_id":4,"category_name":"One Shot","total_days":30,"used_days":0,"remaining_days":30,"max_days":20},{"category_id":3,"category_name":"Paid","total_days":30,"used_days":0,"remaining_days":30,"max_days":15},{"category_id":5,"category_name":"Test","total_days":20,"used_days":0,"remaining_days":20,"max_days":20}],"year":2025}}
+2025-09-17 15:11:37 [INFO]: 📤 GET /api/doctor/dashboard - Status: 200 - Duration: 23ms
+2025-09-17 15:11:37 [INFO]: 📋 Response: [Large response - 1951 characters]
+2025-09-17 15:12:50 [INFO]: 📥 GET /api/leave/categories?status=active - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 15:12:50 [INFO]: 📥 GET /api/leave/balance - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 15:12:50 [INFO]: 📥 GET /api/doctor/dashboard - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 15:12:50 [INFO]: 📤 GET /api/leave/categories?status=active - Status: 200 - Duration: 13ms
+2025-09-17 15:12:50 [INFO]: 📋 Response: {"success":true,"data":{"categories":[{"id":1,"name":"Casual","max_days":3,"description":"Casual leave for personal reasons","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"},{"id":2,"name":"Medical","max_days":7,"description":"Medical leave for health issues","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"},{"id":4,"name":"One Shot","max_days":20,"description":"20day emergency leave One Shot","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"}]}}
+2025-09-17 15:12:50 [INFO]: 📤 GET /api/leave/balance - Status: 200 - Duration: 12ms
+2025-09-17 15:12:50 [INFO]: 📋 Response: {"success":true,"data":{"balance":[{"category_id":1,"category_name":"Casual","total_days":29,"used_days":2,"remaining_days":27,"max_days":3},{"category_id":2,"category_name":"Medical","total_days":30,"used_days":0,"remaining_days":30,"max_days":7},{"category_id":4,"category_name":"One Shot","total_days":30,"used_days":0,"remaining_days":30,"max_days":20},{"category_id":3,"category_name":"Paid","total_days":30,"used_days":0,"remaining_days":30,"max_days":15},{"category_id":5,"category_name":"Test","total_days":20,"used_days":0,"remaining_days":20,"max_days":20}],"year":2025}}
+2025-09-17 15:12:50 [INFO]: 📤 GET /api/doctor/dashboard - Status: 200 - Duration: 17ms
+2025-09-17 15:12:50 [INFO]: 📋 Response: [Large response - 1951 characters]
+2025-09-17 15:12:55 [INFO]: 📥 GET /api/leave/my-leaves?page=1&limit=10 - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 15:12:55 [INFO]: 📤 GET /api/leave/my-leaves?page=1&limit=10 - Status: 200 - Duration: 10ms
+2025-09-17 15:12:55 [INFO]: 📋 Response: [Large response - 1139 characters]
+2025-09-17 15:13:01 [INFO]: 📥 GET /api/leave/my-leaves?page=1&limit=10 - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 15:13:01 [INFO]: 📤 GET /api/leave/my-leaves?page=1&limit=10 - Status: 200 - Duration: 6ms
+2025-09-17 15:13:01 [INFO]: 📋 Response: [Large response - 1139 characters]
+2025-09-17 15:13:09 [INFO]: 📥 GET /api/doctor/dashboard - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 15:13:09 [INFO]: 📤 GET /api/doctor/dashboard - Status: 200 - Duration: 7ms
+2025-09-17 15:13:09 [INFO]: 📋 Response: [Large response - 1951 characters]
+2025-09-17 15:13:10 [INFO]: 📥 GET /api/doctor/dashboard - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 15:13:10 [INFO]: 📥 GET /api/leave/categories?status=active - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 15:13:10 [INFO]: 📥 GET /api/leave/balance - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 15:13:10 [INFO]: 📤 GET /api/leave/categories?status=active - Status: 200 - Duration: 13ms
+2025-09-17 15:13:10 [INFO]: 📋 Response: {"success":true,"data":{"categories":[{"id":1,"name":"Casual","max_days":3,"description":"Casual leave for personal reasons","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"},{"id":2,"name":"Medical","max_days":7,"description":"Medical leave for health issues","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"},{"id":4,"name":"One Shot","max_days":20,"description":"20day emergency leave One Shot","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"}]}}
+2025-09-17 15:13:10 [INFO]: 📤 GET /api/leave/balance - Status: 200 - Duration: 13ms
+2025-09-17 15:13:10 [INFO]: 📋 Response: {"success":true,"data":{"balance":[{"category_id":1,"category_name":"Casual","total_days":29,"used_days":2,"remaining_days":27,"max_days":3},{"category_id":2,"category_name":"Medical","total_days":30,"used_days":0,"remaining_days":30,"max_days":7},{"category_id":4,"category_name":"One Shot","total_days":30,"used_days":0,"remaining_days":30,"max_days":20},{"category_id":3,"category_name":"Paid","total_days":30,"used_days":0,"remaining_days":30,"max_days":15},{"category_id":5,"category_name":"Test","total_days":20,"used_days":0,"remaining_days":20,"max_days":20}],"year":2025}}
+2025-09-17 15:13:10 [INFO]: 📤 GET /api/doctor/dashboard - Status: 200 - Duration: 24ms
+2025-09-17 15:13:10 [INFO]: 📋 Response: [Large response - 1951 characters]
+2025-09-17 15:13:11 [INFO]: 📥 GET /api/leave/my-leaves?page=1&limit=10 - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 15:13:11 [INFO]: 📤 GET /api/leave/my-leaves?page=1&limit=10 - Status: 200 - Duration: 24ms
+2025-09-17 15:13:11 [INFO]: 📋 Response: [Large response - 1139 characters]
+2025-09-17 15:13:13 [INFO]: 📥 GET /api/leave/my-leaves?page=1&limit=10 - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 15:13:13 [INFO]: 📤 GET /api/leave/my-leaves?page=1&limit=10 - Status: 200 - Duration: 5ms
+2025-09-17 15:13:13 [INFO]: 📋 Response: [Large response - 1139 characters]
+2025-09-17 15:13:14 [INFO]: 📥 GET /api/leave/categories?status=active - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 15:13:14 [INFO]: 📥 GET /api/leave/balance - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 15:13:14 [INFO]: 📥 GET /api/doctor/dashboard - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 15:13:14 [INFO]: 📤 GET /api/leave/categories?status=active - Status: 200 - Duration: 16ms
+2025-09-17 15:13:14 [INFO]: 📋 Response: {"success":true,"data":{"categories":[{"id":1,"name":"Casual","max_days":3,"description":"Casual leave for personal reasons","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"},{"id":2,"name":"Medical","max_days":7,"description":"Medical leave for health issues","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"},{"id":4,"name":"One Shot","max_days":20,"description":"20day emergency leave One Shot","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"}]}}
+2025-09-17 15:13:14 [INFO]: 📤 GET /api/leave/balance - Status: 200 - Duration: 15ms
+2025-09-17 15:13:14 [INFO]: 📋 Response: {"success":true,"data":{"balance":[{"category_id":1,"category_name":"Casual","total_days":29,"used_days":2,"remaining_days":27,"max_days":3},{"category_id":2,"category_name":"Medical","total_days":30,"used_days":0,"remaining_days":30,"max_days":7},{"category_id":4,"category_name":"One Shot","total_days":30,"used_days":0,"remaining_days":30,"max_days":20},{"category_id":3,"category_name":"Paid","total_days":30,"used_days":0,"remaining_days":30,"max_days":15},{"category_id":5,"category_name":"Test","total_days":20,"used_days":0,"remaining_days":20,"max_days":20}],"year":2025}}
+2025-09-17 15:13:14 [INFO]: 📤 GET /api/doctor/dashboard - Status: 200 - Duration: 19ms
+2025-09-17 15:13:14 [INFO]: 📋 Response: [Large response - 1951 characters]
+2025-09-17 15:13:18 [INFO]: 📥 GET /api/doctor/dashboard - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 15:13:18 [INFO]: 📤 GET /api/doctor/dashboard - Status: 200 - Duration: 8ms
+2025-09-17 15:13:18 [INFO]: 📋 Response: [Large response - 1951 characters]
+2025-09-17 15:15:31 [INFO]: 📥 GET /api/auth/profile - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 15:15:31 [INFO]: 📤 GET /api/auth/profile - Status: 200 - Duration: 31ms
+2025-09-17 15:15:31 [INFO]: 📋 Response: {"success":true,"data":{"user":{"id":15,"name":"Mithu","email":"mithu@gmail.com","role":"doctor","department":"ENT","phone":"9861500797","employee_id":"mithu12","profile_picture":"/uploads/profiles/15_1757699501913.jpg","created_at":"2025-09-11T03:43:19.000Z","updated_at":"2025-09-12T18:01:53.000Z"}}}
+2025-09-17 15:15:31 [INFO]: 📥 GET /uploads/profiles/15_1757699501913.jpg - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 15:15:31 [INFO]: 📥 GET /api/doctor/dashboard - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-17 15:15:31 [INFO]: 📤 GET /api/doctor/dashboard - Status: 200 - Duration: 12ms
+2025-09-17 15:15:31 [INFO]: 📋 Response: [Large response - 1951 characters]
+2025-09-22 09:29:51 [ERROR]: ❌ Failed to connect to database. Exiting...
+2025-09-22 09:30:56 [INFO]: 🚀 Server started on port 5000
+2025-09-22 09:30:56 [INFO]: 🏥 Hospital Leave Management System API
+2025-09-22 09:30:56 [INFO]: 📍 Health check: http://localhost:5000/health
+2025-09-22 09:30:56 [INFO]: 📋 API documentation: http://localhost:5000/
+2025-09-22 09:30:56 [INFO]: 🌍 Environment: development
+2025-09-22 09:30:58 [INFO]: SIGINT received. Shutting down gracefully...
+2025-09-22 09:31:03 [INFO]: 🚀 Server started on port 5000
+2025-09-22 09:31:03 [INFO]: 🏥 Hospital Leave Management System API
+2025-09-22 09:31:03 [INFO]: 📍 Health check: http://localhost:5000/health
+2025-09-22 09:31:03 [INFO]: 📋 API documentation: http://localhost:5000/
+2025-09-22 09:31:03 [INFO]: 🌍 Environment: development
+2025-09-22 09:31:28 [INFO]: 📥 GET /api/auth/profile - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-22 09:31:28 [ERROR]: Authentication error: jwt expired
+TokenExpiredError: jwt expired
+    at C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\jsonwebtoken\verify.js:101:10)
+    at authenticate (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\middleware\auth.js:18:29)
+    at Layer.handle [as handle_request] (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\express\lib\router\index.js:346:12)
+2025-09-22 09:31:28 [INFO]: 📤 GET /api/auth/profile - Status: 401 - Duration: 17ms
+2025-09-22 09:31:28 [INFO]: 📋 Response: {"success":false,"message":"Token expired."}
+2025-09-22 09:31:37 [INFO]: 📥 POST /api/auth/login - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-22 09:31:37 [INFO]: 📄 Request Body: {"email":"admin@hospital.com","password":"[HIDDEN]"}
+2025-09-22 09:31:37 [INFO]: ✅ User logged in: admin@hospital.com (admin)
+2025-09-22 09:31:37 [INFO]: 📤 POST /api/auth/login - Status: 200 - Duration: 429ms
+2025-09-22 09:31:37 [INFO]: 📋 Response: {"success":true,"message":"Login successful","data":{"user":{"id":13,"name":"Hospital Administrator","email":"admin@hospital.com","role":"admin","department":"Administration","phone":"+1234567890","employee_id":"ADMIN001","profile_picture":"/uploads/profiles/13_1757909107128.jpg","is_active":1},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEzLCJlbWFpbCI6ImFkbWluQGhvc3BpdGFsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1ODUxMzY5NywiZXhwIjoxNzU4NjAwMDk3fQ.KeC2nPxnnl3GyrNeTxQE80wfsWhxmKwGFV9vpVtBnRg"}}
+2025-09-22 09:31:37 [INFO]: 📥 GET /uploads/profiles/13_1757909107128.jpg - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-22 09:31:37 [INFO]: 📥 GET /api/leave/summary?year=2025 - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-22 09:31:37 [INFO]: 📤 GET /api/leave/summary?year=2025 - Status: 200 - Duration: 53ms
+2025-09-22 09:31:37 [INFO]: 📋 Response: {"success":true,"data":{"year":2025,"applicationsSummary":{"pending":1,"approved":1,"rejected":1},"categoryUsage":[{"category_name":"Casual","total_allocated":"79","total_used":"2","doctors_count":2},{"category_name":"Medical","total_allocated":"30","total_used":"0","doctors_count":1},{"category_name":"One Shot","total_allocated":"30","total_used":"0","doctors_count":1},{"category_name":"Paid","total_allocated":"30","total_used":"0","doctors_count":1},{"category_name":"Test","total_allocated":"20","total_used":"0","doctors_count":1}],"topRequesters":[{"doctor_name":"Mithu","employee_id":"mithu12","department":"ENT","applications_count":3,"approved_days":"2"}]}}
+2025-09-22 09:32:11 [INFO]: 📥 GET /api/leave/all?page=1&limit=10 - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-22 09:32:12 [INFO]: 📤 GET /api/leave/all?page=1&limit=10 - Status: 200 - Duration: 51ms
+2025-09-22 09:32:12 [INFO]: 📋 Response: [Large response - 1379 characters]
+2025-09-22 09:32:20 [INFO]: 📥 GET /api/leave/categories?status=active - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-22 09:32:20 [INFO]: 📥 GET /api/doctor/all?status=active - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-22 09:32:20 [INFO]: 📤 GET /api/leave/categories?status=active - Status: 200 - Duration: 11ms
+2025-09-22 09:32:20 [INFO]: 📋 Response: {"success":true,"data":{"categories":[{"id":1,"name":"Casual","max_days":3,"description":"Casual leave for personal reasons","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"},{"id":2,"name":"Medical","max_days":7,"description":"Medical leave for health issues","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"},{"id":4,"name":"One Shot","max_days":20,"description":"20day emergency leave One Shot","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"}]}}
+2025-09-22 09:32:20 [INFO]: 📤 GET /api/doctor/all?status=active - Status: 200 - Duration: 16ms
+2025-09-22 09:32:20 [INFO]: 📋 Response: {"success":true,"data":{"doctors":[{"id":15,"name":"Mithu","email":"mithu@gmail.com","department":"ENT","phone":"9861500797","employee_id":"mithu12","profile_picture":"/uploads/profiles/15_1757699501913.jpg","is_active":1,"created_at":"2025-09-11T03:43:19.000Z"}]}}
+2025-09-22 09:32:21 [INFO]: 📥 GET /api/leave/categories?status=active - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-22 09:32:21 [INFO]: 📤 GET /api/leave/categories?status=active - Status: 200 - Duration: 3ms
+2025-09-22 09:32:21 [INFO]: 📋 Response: {"success":true,"data":{"categories":[{"id":1,"name":"Casual","max_days":3,"description":"Casual leave for personal reasons","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"},{"id":2,"name":"Medical","max_days":7,"description":"Medical leave for health issues","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"},{"id":4,"name":"One Shot","max_days":20,"description":"20day emergency leave One Shot","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"}]}}
+2025-09-22 09:32:25 [INFO]: 📥 GET /api/doctor/all?status=active - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-22 09:32:25 [INFO]: 📥 GET /api/leave/categories?status=active - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-22 09:32:25 [INFO]: 📤 GET /api/doctor/all?status=active - Status: 200 - Duration: 11ms
+2025-09-22 09:32:25 [INFO]: 📋 Response: {"success":true,"data":{"doctors":[{"id":15,"name":"Mithu","email":"mithu@gmail.com","department":"ENT","phone":"9861500797","employee_id":"mithu12","profile_picture":"/uploads/profiles/15_1757699501913.jpg","is_active":1,"created_at":"2025-09-11T03:43:19.000Z"}]}}
+2025-09-22 09:32:25 [INFO]: 📤 GET /api/leave/categories?status=active - Status: 200 - Duration: 10ms
+2025-09-22 09:32:25 [INFO]: 📋 Response: {"success":true,"data":{"categories":[{"id":1,"name":"Casual","max_days":3,"description":"Casual leave for personal reasons","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"},{"id":2,"name":"Medical","max_days":7,"description":"Medical leave for health issues","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"},{"id":4,"name":"One Shot","max_days":20,"description":"20day emergency leave One Shot","is_active":1,"created_at":"2025-09-05T12:33:43.000Z"}]}}
+2025-09-22 09:32:28 [INFO]: 📥 GET /api/leave/doctors/15/balance?year=2025&_t=1758513748341 - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-22 09:32:28 [INFO]: 🔍 [FIXED-v2] Admin requesting balance for doctor 15, year 2025 - NEW CODE ACTIVE
+2025-09-22 09:32:28 [INFO]: ✅ Doctor found: Mithu (mithu12)
+2025-09-22 09:32:28 [INFO]: 📊 [FIXED] STRICT database query returned 5 records
+2025-09-22 09:32:28 [INFO]: 📋 [FIXED] Casual: 29 total, 2 used, 27 remaining
+2025-09-22 09:32:28 [INFO]: 📋 [FIXED] Medical: 30 total, 0 used, 30 remaining
+2025-09-22 09:32:28 [INFO]: 📋 [FIXED] One Shot: 30 total, 0 used, 30 remaining
+2025-09-22 09:32:28 [INFO]: 📋 [FIXED] Paid: 30 total, 0 used, 30 remaining
+2025-09-22 09:32:28 [INFO]: 📋 [FIXED] Test: 20 total, 0 used, 20 remaining
+2025-09-22 09:32:28 [INFO]: 📤 [FIXED-v2] NEW CODE: Sending response with 5 balance records
+2025-09-22 09:32:28 [INFO]: 📤 GET /api/leave/doctors/15/balance?year=2025&_t=1758513748341 - Status: 200 - Duration: 13ms
+2025-09-22 09:32:28 [INFO]: 📋 Response: {"success":true,"data":{"doctor":{"id":15,"name":"Mithu","email":"mithu@gmail.com","employee_id":"mithu12","department":"ENT"},"balance":[{"category_id":1,"category_name":"Casual","total_days":29,"used_days":2,"remaining_days":27},{"category_id":2,"category_name":"Medical","total_days":30,"used_days":0,"remaining_days":30},{"category_id":4,"category_name":"One Shot","total_days":30,"used_days":0,"remaining_days":30},{"category_id":3,"category_name":"Paid","total_days":30,"used_days":0,"remaining_days":30},{"category_id":5,"category_name":"Test","total_days":20,"used_days":0,"remaining_days":20}],"year":2025}}
+2025-09-22 09:32:30 [INFO]: 📥 GET /api/leave/doctors/15/balance?year=2025&_t=1758513750466 - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-22 09:32:30 [INFO]: 🔍 [FIXED-v2] Admin requesting balance for doctor 15, year 2025 - NEW CODE ACTIVE
+2025-09-22 09:32:30 [INFO]: ✅ Doctor found: Mithu (mithu12)
+2025-09-22 09:32:30 [INFO]: 📊 [FIXED] STRICT database query returned 5 records
+2025-09-22 09:32:30 [INFO]: 📋 [FIXED] Casual: 29 total, 2 used, 27 remaining
+2025-09-22 09:32:30 [INFO]: 📋 [FIXED] Medical: 30 total, 0 used, 30 remaining
+2025-09-22 09:32:30 [INFO]: 📋 [FIXED] One Shot: 30 total, 0 used, 30 remaining
+2025-09-22 09:32:30 [INFO]: 📋 [FIXED] Paid: 30 total, 0 used, 30 remaining
+2025-09-22 09:32:30 [INFO]: 📋 [FIXED] Test: 20 total, 0 used, 20 remaining
+2025-09-22 09:32:30 [INFO]: 📤 [FIXED-v2] NEW CODE: Sending response with 5 balance records
+2025-09-22 09:32:30 [INFO]: 📤 GET /api/leave/doctors/15/balance?year=2025&_t=1758513750466 - Status: 200 - Duration: 12ms
+2025-09-22 09:32:30 [INFO]: 📋 Response: {"success":true,"data":{"doctor":{"id":15,"name":"Mithu","email":"mithu@gmail.com","employee_id":"mithu12","department":"ENT"},"balance":[{"category_id":1,"category_name":"Casual","total_days":29,"used_days":2,"remaining_days":27},{"category_id":2,"category_name":"Medical","total_days":30,"used_days":0,"remaining_days":30},{"category_id":4,"category_name":"One Shot","total_days":30,"used_days":0,"remaining_days":30},{"category_id":3,"category_name":"Paid","total_days":30,"used_days":0,"remaining_days":30},{"category_id":5,"category_name":"Test","total_days":20,"used_days":0,"remaining_days":20}],"year":2025}}
+2025-09-22 09:32:31 [INFO]: 📥 GET /api/leave/doctors/15/balance?year=2025&_t=1758513751139 - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-22 09:32:31 [INFO]: 🔍 [FIXED-v2] Admin requesting balance for doctor 15, year 2025 - NEW CODE ACTIVE
+2025-09-22 09:32:31 [INFO]: ✅ Doctor found: Mithu (mithu12)
+2025-09-22 09:32:31 [INFO]: 📊 [FIXED] STRICT database query returned 5 records
+2025-09-22 09:32:31 [INFO]: 📋 [FIXED] Casual: 29 total, 2 used, 27 remaining
+2025-09-22 09:32:31 [INFO]: 📋 [FIXED] Medical: 30 total, 0 used, 30 remaining
+2025-09-22 09:32:31 [INFO]: 📋 [FIXED] One Shot: 30 total, 0 used, 30 remaining
+2025-09-22 09:32:31 [INFO]: 📋 [FIXED] Paid: 30 total, 0 used, 30 remaining
+2025-09-22 09:32:31 [INFO]: 📋 [FIXED] Test: 20 total, 0 used, 20 remaining
+2025-09-22 09:32:31 [INFO]: 📤 [FIXED-v2] NEW CODE: Sending response with 5 balance records
+2025-09-22 09:32:31 [INFO]: 📤 GET /api/leave/doctors/15/balance?year=2025&_t=1758513751139 - Status: 200 - Duration: 8ms
+2025-09-22 09:32:31 [INFO]: 📋 Response: {"success":true,"data":{"doctor":{"id":15,"name":"Mithu","email":"mithu@gmail.com","employee_id":"mithu12","department":"ENT"},"balance":[{"category_id":1,"category_name":"Casual","total_days":29,"used_days":2,"remaining_days":27},{"category_id":2,"category_name":"Medical","total_days":30,"used_days":0,"remaining_days":30},{"category_id":4,"category_name":"One Shot","total_days":30,"used_days":0,"remaining_days":30},{"category_id":3,"category_name":"Paid","total_days":30,"used_days":0,"remaining_days":30},{"category_id":5,"category_name":"Test","total_days":20,"used_days":0,"remaining_days":20}],"year":2025}}
+2025-09-22 09:32:36 [INFO]: 📥 GET /api/leave/doctors/15/balance?year=2025&_t=1758513756813 - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0
+2025-09-22 09:32:36 [INFO]: 🔍 [FIXED-v2] Admin requesting balance for doctor 15, year 2025 - NEW CODE ACTIVE
+2025-09-22 09:32:36 [INFO]: ✅ Doctor found: Mithu (mithu12)
+2025-09-22 09:32:36 [INFO]: 📊 [FIXED] STRICT database query returned 5 records
+2025-09-22 09:32:36 [INFO]: 📋 [FIXED] Casual: 29 total, 2 used, 27 remaining
+2025-09-22 09:32:36 [INFO]: 📋 [FIXED] Medical: 30 total, 0 used, 30 remaining
+2025-09-22 09:32:36 [INFO]: 📋 [FIXED] One Shot: 30 total, 0 used, 30 remaining
+2025-09-22 09:32:36 [INFO]: 📋 [FIXED] Paid: 30 total, 0 used, 30 remaining
+2025-09-22 09:32:36 [INFO]: 📋 [FIXED] Test: 20 total, 0 used, 20 remaining
+2025-09-22 09:32:36 [INFO]: 📤 [FIXED-v2] NEW CODE: Sending response with 5 balance records
+2025-09-22 09:32:36 [INFO]: 📤 GET /api/leave/doctors/15/balance?year=2025&_t=1758513756813 - Status: 200 - Duration: 12ms
+2025-09-22 09:32:36 [INFO]: 📋 Response: {"success":true,"data":{"doctor":{"id":15,"name":"Mithu","email":"mithu@gmail.com","employee_id":"mithu12","department":"ENT"},"balance":[{"category_id":1,"category_name":"Casual","total_days":29,"used_days":2,"remaining_days":27},{"category_id":2,"category_name":"Medical","total_days":30,"used_days":0,"remaining_days":30},{"category_id":4,"category_name":"One Shot","total_days":30,"used_days":0,"remaining_days":30},{"category_id":3,"category_name":"Paid","total_days":30,"used_days":0,"remaining_days":30},{"category_id":5,"category_name":"Test","total_days":20,"used_days":0,"remaining_days":20}],"year":2025}}

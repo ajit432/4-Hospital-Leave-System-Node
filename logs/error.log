@@ -1,0 +1,37 @@
+2025-09-22 09:29:51 [ERROR]: ❌ Failed to connect to database. Exiting...
+2025-09-22 09:31:28 [ERROR]: Authentication error: jwt expired
+TokenExpiredError: jwt expired
+    at C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\jsonwebtoken\verify.js:101:10)
+    at authenticate (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\middleware\auth.js:18:29)
+    at Layer.handle [as handle_request] (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\express\lib\router\index.js:346:12)
+2025-11-18 10:44:55 [ERROR]: Authentication error: jwt expired
+TokenExpiredError: jwt expired
+    at C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\jsonwebtoken\verify.js:101:10)
+    at authenticate (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\middleware\auth.js:18:29)
+    at Layer.handle [as handle_request] (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\express\lib\router\index.js:346:12)
+2025-11-18 10:45:02 [ERROR]: ❌ Error in POST /api/auth/login: read ECONNRESET
+Error: read ECONNRESET
+    at PromisePool.execute (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\mysql2\lib\promise\pool.js:54:22)
+    at C:\Users\Ajit Kumar Behera\Desktop\Project React\node\controllers\authController.js:134:32
+    at C:\Users\Ajit Kumar Behera\Desktop\Project React\node\middleware\errorLogger.js:51:25
+    at Layer.handle [as handle_request] (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\express\lib\router\route.js:149:13)
+    at handleValidationErrors (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\middleware\validation.js:13:5)
+    at Layer.handle [as handle_request] (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\express\lib\router\route.js:149:13)
+    at middleware (C:\Users\Ajit Kumar Behera\Desktop\Project React\node\node_modules\express-validator\lib\middlewares\check.js:16:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
