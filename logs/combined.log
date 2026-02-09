@@ -1813,3 +1813,101 @@ Error: read ECONNRESET
 2025-11-18 10:51:34 [INFO]: 📥 GET /api/doctor/dashboard - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36 Edg/142.0.0.0
 2025-11-18 10:51:34 [INFO]: 📤 GET /api/doctor/dashboard - Status: 200 - Duration: 6ms
 2025-11-18 10:51:34 [INFO]: 📋 Response: [Large response - 1951 characters]
+2025-11-18 20:28:41 [ERROR]: ❌ Failed to connect to database. Exiting...
+2025-11-18 21:02:38 [INFO]: 🚀 Server started on port 5000
+2025-11-18 21:02:38 [INFO]: 🏥 Hospital Leave Management System API
+2025-11-18 21:02:38 [INFO]: 📍 Health check: http://localhost:5000/health
+2025-11-18 21:02:38 [INFO]: 📋 API documentation: http://localhost:5000/
+2025-11-18 21:02:38 [INFO]: 🌍 Environment: development
+2025-11-18 21:02:42 [INFO]: 📥 POST /api/auth/login - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+2025-11-18 21:02:42 [INFO]: 📄 Request Body: {"email":"mithu@gmail.com","password":"[HIDDEN]"}
+2025-11-18 21:02:42 [INFO]: 📤 POST /api/auth/login - Status: 401 - Duration: 49ms
+2025-11-18 21:02:42 [INFO]: 📋 Response: {"success":false,"message":"Invalid email or password"}
+2025-11-18 21:02:45 [INFO]: 📥 POST /api/auth/login - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+2025-11-18 21:02:45 [INFO]: 📄 Request Body: {"email":"mithu@gmail.com","password":"[HIDDEN]"}
+2025-11-18 21:02:45 [INFO]: 📤 POST /api/auth/login - Status: 401 - Duration: 4ms
+2025-11-18 21:02:45 [INFO]: 📋 Response: {"success":false,"message":"Invalid email or password"}
+2025-11-18 21:02:46 [INFO]: 📥 POST /api/auth/login - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+2025-11-18 21:02:46 [INFO]: 📄 Request Body: {"email":"mithu@gmail.com","password":"[HIDDEN]"}
+2025-11-18 21:02:46 [INFO]: 📤 POST /api/auth/login - Status: 401 - Duration: 3ms
+2025-11-18 21:02:46 [INFO]: 📋 Response: {"success":false,"message":"Invalid email or password"}
+2025-11-18 21:02:47 [INFO]: 📥 POST /api/auth/login - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+2025-11-18 21:02:47 [INFO]: 📄 Request Body: {"email":"mithu@gmail.com","password":"[HIDDEN]"}
+2025-11-18 21:02:47 [INFO]: 📤 POST /api/auth/login - Status: 401 - Duration: 2ms
+2025-11-18 21:02:47 [INFO]: 📋 Response: {"success":false,"message":"Invalid email or password"}
+2025-11-18 21:02:48 [INFO]: 📥 POST /api/auth/login - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+2025-11-18 21:02:48 [INFO]: 📄 Request Body: {"email":"mithu@gmail.com","password":"[HIDDEN]"}
+2025-11-18 21:02:48 [INFO]: 📤 POST /api/auth/login - Status: 401 - Duration: 3ms
+2025-11-18 21:02:48 [INFO]: 📋 Response: {"success":false,"message":"Invalid email or password"}
+2025-11-18 21:02:49 [INFO]: 📥 POST /api/auth/login - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+2025-11-18 21:02:49 [INFO]: 📄 Request Body: {"email":"mithu@gmail.com","password":"[HIDDEN]"}
+2025-11-18 21:02:49 [INFO]: 📤 POST /api/auth/login - Status: 401 - Duration: 2ms
+2025-11-18 21:02:49 [INFO]: 📋 Response: {"success":false,"message":"Invalid email or password"}
+2025-11-18 21:02:49 [INFO]: 📥 POST /api/auth/login - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+2025-11-18 21:02:49 [INFO]: 📄 Request Body: {"email":"mithu@gmail.com","password":"[HIDDEN]"}
+2025-11-18 21:02:49 [INFO]: 📤 POST /api/auth/login - Status: 401 - Duration: 2ms
+2025-11-18 21:02:49 [INFO]: 📋 Response: {"success":false,"message":"Invalid email or password"}
+2025-11-18 21:02:50 [INFO]: 📥 POST /api/auth/login - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+2025-11-18 21:02:50 [INFO]: 📄 Request Body: {"email":"mithu@gmail.com","password":"[HIDDEN]"}
+2025-11-18 21:02:50 [INFO]: 📤 POST /api/auth/login - Status: 401 - Duration: 2ms
+2025-11-18 21:02:50 [INFO]: 📋 Response: {"success":false,"message":"Invalid email or password"}
+2025-11-18 21:02:51 [INFO]: 📥 POST /api/auth/login - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+2025-11-18 21:02:51 [INFO]: 📄 Request Body: {"email":"mithu@gmail.com","password":"[HIDDEN]"}
+2025-11-18 21:02:51 [INFO]: 📤 POST /api/auth/login - Status: 401 - Duration: 2ms
+2025-11-18 21:02:51 [INFO]: 📋 Response: {"success":false,"message":"Invalid email or password"}
+2025-11-18 21:02:51 [INFO]: 📥 POST /api/auth/login - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+2025-11-18 21:02:51 [INFO]: 📄 Request Body: {"email":"mithu@gmail.com","password":"[HIDDEN]"}
+2025-11-18 21:02:51 [INFO]: 📤 POST /api/auth/login - Status: 401 - Duration: 3ms
+2025-11-18 21:02:51 [INFO]: 📋 Response: {"success":false,"message":"Invalid email or password"}
+2025-11-18 21:02:52 [INFO]: 📥 POST /api/auth/login - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+2025-11-18 21:02:52 [INFO]: 📄 Request Body: {"email":"mithu@gmail.com","password":"[HIDDEN]"}
+2025-11-18 21:02:52 [INFO]: 📤 POST /api/auth/login - Status: 401 - Duration: 2ms
+2025-11-18 21:02:52 [INFO]: 📋 Response: {"success":false,"message":"Invalid email or password"}
+2025-11-18 21:04:42 [INFO]: 📥 POST /api/auth/login - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+2025-11-18 21:04:42 [INFO]: 📄 Request Body: {"email":"mithu@gmail.com","password":"[HIDDEN]"}
+2025-11-18 21:04:42 [INFO]: ✅ User logged in: mithu@gmail.com (doctor)
+2025-11-18 21:04:42 [INFO]: 📤 POST /api/auth/login - Status: 200 - Duration: 251ms
+2025-11-18 21:04:42 [INFO]: 📋 Response: {"success":true,"message":"Login successful","data":{"user":{"id":15,"name":"Mithu","email":"mithu@gmail.com","role":"doctor","department":"ENT","phone":"9861500797","employee_id":"mithu12","profile_picture":"/uploads/profiles/15_1757699501913.jpg","is_active":1},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE1LCJlbWFpbCI6Im1pdGh1QGdtYWlsLmNvbSIsInJvbGUiOiJkb2N0b3IiLCJpYXQiOjE3NjM0ODAwODIsImV4cCI6MTc2MzU2NjQ4Mn0.toQpAH5bgswOuONTzZACg43FQQqA9kRi8XgnhwTp3pA"}}
+2025-11-18 21:04:42 [INFO]: 📥 GET /uploads/profiles/15_1757699501913.jpg - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+2025-11-18 21:04:42 [INFO]: 📥 GET /api/doctor/dashboard - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+2025-11-18 21:04:42 [INFO]: 📤 GET /api/doctor/dashboard - Status: 200 - Duration: 23ms
+2025-11-18 21:04:42 [INFO]: 📋 Response: [Large response - 1951 characters]
+2025-11-18 21:04:42 [INFO]: 📥 GET /api/doctor/dashboard - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+2025-11-18 21:04:42 [INFO]: 📤 GET /api/doctor/dashboard - Status: 200 - Duration: 12ms
+2025-11-18 21:04:42 [INFO]: 📋 Response: [Large response - 1951 characters]
+2025-11-19 00:00:55 [INFO]: 📥 GET /api/auth/profile - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+2025-11-19 00:00:55 [INFO]: 📤 GET /api/auth/profile - Status: 200 - Duration: 66ms
+2025-11-19 00:00:55 [INFO]: 📋 Response: {"success":true,"data":{"user":{"id":15,"name":"Mithu","email":"mithu@gmail.com","role":"doctor","department":"ENT","phone":"9861500797","employee_id":"mithu12","profile_picture":"/uploads/profiles/15_1757699501913.jpg","created_at":"2025-09-11T03:43:19.000Z","updated_at":"2025-09-12T18:01:53.000Z"}}}
+2025-11-19 00:00:55 [INFO]: 📥 GET /api/auth/profile - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+2025-11-19 00:00:55 [INFO]: 📤 GET /api/auth/profile - Status: 200 - Duration: 14ms
+2025-11-19 00:00:55 [INFO]: 📋 Response: {"success":true,"data":{"user":{"id":15,"name":"Mithu","email":"mithu@gmail.com","role":"doctor","department":"ENT","phone":"9861500797","employee_id":"mithu12","profile_picture":"/uploads/profiles/15_1757699501913.jpg","created_at":"2025-09-11T03:43:19.000Z","updated_at":"2025-09-12T18:01:53.000Z"}}}
+2025-11-19 00:00:55 [INFO]: 📥 GET /uploads/profiles/15_1757699501913.jpg - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+2025-11-19 00:00:55 [INFO]: 📥 GET /api/doctor/dashboard - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+2025-11-19 00:00:55 [INFO]: 📤 GET /api/doctor/dashboard - Status: 200 - Duration: 92ms
+2025-11-19 00:00:55 [INFO]: 📋 Response: [Large response - 1951 characters]
+2025-11-19 00:00:55 [INFO]: 📥 GET /api/doctor/dashboard - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+2025-11-19 00:00:55 [INFO]: 📤 GET /api/doctor/dashboard - Status: 200 - Duration: 11ms
+2025-11-19 00:00:55 [INFO]: 📋 Response: [Large response - 1951 characters]
+2026-01-21 21:52:48 [ERROR]: ❌ Failed to connect to database. Exiting...
+2026-01-21 22:02:21 [INFO]: 🚀 Server started on port 5000
+2026-01-21 22:02:21 [INFO]: 🏥 Hospital Leave Management System API
+2026-01-21 22:02:21 [INFO]: 📍 Health check: http://localhost:5000/health
+2026-01-21 22:02:21 [INFO]: 📋 API documentation: http://localhost:5000/
+2026-01-21 22:02:21 [INFO]: 🌍 Environment: development
+2026-01-21 22:02:54 [INFO]: 📥 POST /api/auth/login - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+2026-01-21 22:02:54 [INFO]: 📄 Request Body: {"email":"mithu@gmail.com","password":"[HIDDEN]"}
+2026-01-21 22:02:55 [INFO]: ✅ User logged in: mithu@gmail.com (doctor)
+2026-01-21 22:02:55 [INFO]: 📤 POST /api/auth/login - Status: 200 - Duration: 297ms
+2026-01-21 22:02:55 [INFO]: 📋 Response: {"success":true,"message":"Login successful","data":{"user":{"id":15,"name":"Mithu","email":"mithu@gmail.com","role":"doctor","department":"ENT","phone":"9861500797","employee_id":"mithu12","profile_picture":"/uploads/profiles/15_1757699501913.jpg","is_active":1},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE1LCJlbWFpbCI6Im1pdGh1QGdtYWlsLmNvbSIsInJvbGUiOiJkb2N0b3IiLCJpYXQiOjE3NjkwMTMxNzUsImV4cCI6MTc2OTA5OTU3NX0.5G_K-dbmJCY4B46ZWtH_1T642E5tMtjc6WYtRSjZF-s"}}
+2026-01-21 22:02:55 [INFO]: 📥 GET /uploads/profiles/15_1757699501913.jpg - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+2026-01-21 22:02:55 [INFO]: 📥 GET /api/doctor/dashboard - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+2026-01-21 22:02:55 [INFO]: 📤 GET /api/doctor/dashboard - Status: 200 - Duration: 55ms
+2026-01-21 22:02:55 [INFO]: 📋 Response: [Large response - 1491 characters]
+2026-01-21 22:02:55 [INFO]: 📥 GET /api/doctor/dashboard - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+2026-01-21 22:02:55 [INFO]: 📤 GET /api/doctor/dashboard - Status: 200 - Duration: 20ms
+2026-01-21 22:02:55 [INFO]: 📋 Response: [Large response - 1491 characters]
+2026-01-21 22:05:23 [INFO]: 📥 POST /api/auth/logout - IP: ::1 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+2026-01-21 22:05:23 [INFO]: ✅ User logged out: mithu@gmail.com
+2026-01-21 22:05:23 [INFO]: 📤 POST /api/auth/logout - Status: 200 - Duration: 6ms
+2026-01-21 22:05:23 [INFO]: 📋 Response: {"success":true,"message":"Logged out successfully"}
+2026-02-09 16:46:50 [ERROR]: ❌ Failed to connect to database. Exiting...
