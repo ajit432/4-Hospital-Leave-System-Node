@@ -1924,3 +1924,4 @@ Error: read ECONNRESET
 2026-02-09 17:47:20 [INFO]: 📍 Health check: http://localhost:5000/health
 2026-02-09 17:47:20 [INFO]: 📋 API documentation: http://localhost:5000/
 2026-02-09 17:47:20 [INFO]: 🌍 Environment: development
+2026-02-10 16:37:31 [ERROR]: ❌ Failed to connect to database. Exiting...
