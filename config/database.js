@@ -1,8 +1,10 @@
 const mysql = require('mysql2/promise');
+const { port } = require('../config');
 require('dotenv').config();
 
 const dbConfig = {
     host: process.env.DB_HOST || 'localhost',
+    port: process.env.DB_PORT || 3307,
     user: process.env.DB_USER || 'userajit',
     password: process.env.DB_PASSWORD || 'Ajit@123',
     database: process.env.DB_NAME || 'hospital_leave_system',

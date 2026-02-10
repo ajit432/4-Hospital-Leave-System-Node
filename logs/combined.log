@@ -1911,3 +1911,16 @@ Error: read ECONNRESET
 2026-01-21 22:05:23 [INFO]: 📤 POST /api/auth/logout - Status: 200 - Duration: 6ms
 2026-01-21 22:05:23 [INFO]: 📋 Response: {"success":true,"message":"Logged out successfully"}
 2026-02-09 16:46:50 [ERROR]: ❌ Failed to connect to database. Exiting...
+2026-02-09 17:42:58 [INFO]: 🚀 Server started on port 5000
+2026-02-09 17:42:58 [INFO]: 🏥 Hospital Leave Management System API
+2026-02-09 17:42:58 [INFO]: 📍 Health check: http://localhost:5000/health
+2026-02-09 17:42:58 [INFO]: 📋 API documentation: http://localhost:5000/
+2026-02-09 17:42:58 [INFO]: 🌍 Environment: development
+2026-02-09 17:46:17 [INFO]: SIGINT received. Shutting down gracefully...
+2026-02-09 17:46:20 [ERROR]: ❌ Failed to connect to database. Exiting...
+2026-02-09 17:46:34 [ERROR]: ❌ Failed to connect to database. Exiting...
+2026-02-09 17:47:20 [INFO]: 🚀 Server started on port 5000
+2026-02-09 17:47:20 [INFO]: 🏥 Hospital Leave Management System API
+2026-02-09 17:47:20 [INFO]: 📍 Health check: http://localhost:5000/health
+2026-02-09 17:47:20 [INFO]: 📋 API documentation: http://localhost:5000/
+2026-02-09 17:47:20 [INFO]: 🌍 Environment: development
