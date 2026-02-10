@@ -15,7 +15,6 @@ const dbConfig = {
     timeout: 60000
 };
 
-
 // Create connection pool
 const pool = mysql.createPool(dbConfig);
 
